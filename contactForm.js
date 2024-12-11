@@ -18,11 +18,6 @@ jQuery(function ($) {
         .replace('[contactId]', contactId || '');
     }
   
-    // Handle form submission
-    $('#contactForm').on('submit', function (event) {
-      event.preventDefault(); // Prevent default form submission behavior
-      $(':button').attr('disabled', true);
-  
       // Use FormData to gather form inputs
       const form = this;
       const formData = new FormData(form);
