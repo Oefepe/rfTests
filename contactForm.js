@@ -25,7 +25,7 @@ jQuery(function ($) {
       .replace('[user-id]', userId || '')
       .replace('[resourceID]', resourceId || '')
       .replace('[contactId]', contactId || '');
-    
+
     console.log('Formatted Redirect URL:', contactFormLink);
 
     // Remove redirect attributes immediately to prevent Webflow's default behavior
@@ -36,7 +36,7 @@ jQuery(function ($) {
   if (contactId) {
     $('#contactEmail').prop('disabled', true);  // Disable the email input field
     $('label[for="email"]').css('color', '#aaa');
-    
+
     $.get(
       'https://apiv2.rapidfunnel.com/v2/contact-details/' + contactId,
       function (response) {
@@ -64,7 +64,7 @@ jQuery(function ($) {
   // Handle form submission
   $('#contactFormSubmitBtn').on('click', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
-    $(':button').attr('disabled', true);
+    $('#contactFormSubmitBtn').attr('disabled', false)
 
     var formData = 'firstName=' + document.getElementById('contactFirstName').value +
           '&lastName=' + document.getElementById('contactLastName').value +
@@ -77,7 +77,7 @@ jQuery(function ($) {
     //      '&streetaddress=' + 'testStreet' +
     //      '&city=' + 'Denver' +
     //      '&pincode=' + '80401';
-          
+
 
     // Submit the form data to the API
     $.ajax({
@@ -109,7 +109,7 @@ jQuery(function ($) {
           alert('A contact could not be added!');
           // Open linked URL
           if (contactFormLink) {
-            window.location.href = contactFormLink;
+            contactFormLink = contactFormLink.replace(contactFormLink, "null");
           }
         }
       },
@@ -118,7 +118,7 @@ jQuery(function ($) {
         console.error(error);
         // Open linked URL
           if (contactFormLink) {
-            window.location.href = contactFormLink;
+            contactFormLink = contactFormLink.replace(contactFormLink, "null");
           }
       },
     });
