@@ -1,0 +1,27 @@
+# npm
+/node_modules
+npm-debug.*
+.npm
+# build
+build/
+logs/
+*.log
+*.tsbuildinfo
+.eslintcache
+# dotenv
+.env.kub
+.env.local
+.env.test
+# ide
+.idea
+.vscode
+# os
+.DS_Store
+#cypress
+cypress/downloads
+public/uploads
+# test
+coverage
+.nyc_output
+# sonar
+reports

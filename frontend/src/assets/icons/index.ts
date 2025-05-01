@@ -1,0 +1,16 @@
+export { AppleIcon } from './AppleIcon';
+export { EmailPhoneIcon } from './EmailPhoneIcon';
+export { GoogleIcon } from './GoogleIcon';
+export { FacebookIcon } from './FacebookIcon';
+export { NameIcon } from './NameIcon';
+export { PasswordIcon } from './PasswordIcon';
+export * as AlertIcons from './AlertIcons';
+export { ArrowIcon } from './ArrowIcon';
+export { QrCodeIcon } from './QrCodeIcon';
+export { SendToPhoneIcon } from './SendToPhoneIcon';
+export { RfPoweredIcon } from './RfPoweredIcon';
+export { AndroidIcon } from './AndroidIcon';
+export { CloseIcon } from './CloseIcon';
+export { MessageIcon } from './MessageIcon';
+export { GooglePlayQRCodeIcon } from './GooglePlayQRCodeIcon';
+export { AppStoreQRCodeIcon } from './AppStoreQRCodeIcon';

@@ -1,0 +1,9 @@
+{
+    "data": [
+        {
+            "status": 500,
+            "title": "Some error",
+            "detail": "Some error message"
+        }
+    ]
+}

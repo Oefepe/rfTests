@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "Zahlungsmethode hinzufügen",
+      "credit_or_debit" : "Kredit- oder Debitkarte",
+      "delete_account" : "KONTO LÖSCHEN",
+      "pay_and_upgrade" : "Bezahlen und upgraden"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "Bist du sicher?",
+      "main_message" : "Ihr monatliches Abonnement wird bis zum Ende Ihres Abrechnungszeitraums bezahlt. Wenn Sie Ihr Abonnement am Ende des Zeitraums kündigen möchten, klicken Sie bitte unten auf „Ja, fortfahren“, um zum nächsten Bildschirm zu gelangen.\n\nWenn Sie Ihr Abonnement kündigen, verlieren Sie jeglichen Zugriff auf Ihr Konto, einschließlich:",
+      "subscription_cancelled_message" : "Ihr Abonnement wurde gekündigt."
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "Es tut uns leid, dass Sie uns verlassen!",
+      "main_message" : "Ihr Feedback ist uns wichtig! Bitte nehmen Sie sich kurz Zeit, um uns den Grund für Ihre Stornierung und Ihre sonstigen Anmerkungen mitzuteilen.",
+      "notice_alert" : "Ihr Abonnement wurde gekündigt. Nach dem 30. April 2023 ist es nicht mehr aktiv."
+    },
+    "field_label" : {
+      "card_number" : "Kartennummer",
+      "coupon" : "Coupon",
+      "cvv_code" : "CVV-Code",
+      "expiration_date" : "Ablaufdatum (MM/JJJJ)",
+      "month" : "Monat",
+      "name_on_card" : "Name auf der Karte",
+      "year" : "Jahr"
+    },
+    "offer_badge" : {
+      "best" : "AM BESTEN",
+      "deal" : "HANDELN"
+    },
+    "payment_method" : {
+      "credit_card" : "Kreditkarte",
+      "paypal" : "PayPal"
+    },
+    "plans_pricing" : {
+      "headline" : "Alles im Standard plus ..."
+    },
+    "remove_payment_modal" : {
+      "message" : "Möchten Sie diese Zahlungsmethode wirklich löschen?"
+    },
+    "remove_payment_model" : {
+      "headline" : "Zahlungsmethode entfernen"
+    },
+    "text" : {
+      "agree_to_term_msg" : "Indem Sie auf „Bezahlen und Upgrade durchführen“ klicken, stimmen Sie den folgenden Richtlinien zu.",
+      "authorize_cc_msg" : "Ich ermächtige RapidFunnel Inc., diesen Betrag von meinem Konto zu belasten.",
+      "cancel_subscription" : "ABONNEMENT BEENDEN",
+      "current_payment_method" : "AKTUELLE ZAHLUNGSMETHODE",
+      "month" : "Monat",
+      "monthly" : "Monatlich",
+      "next_billing_amount" : "Nächster Rechnungsbetrag",
+      "next_billing_date" : "Nächstes Abrechnungsdatum",
+      "payment" : "Zahlung",
+      "payment_history" : "ZAHLUNGSHISTORIE",
+      "payment_method" : "Bezahlverfahren",
+      "paypal_msg" : "Wenn Sie sich für die Zahlung mit „PayPal“ entscheiden, werden Sie auf eine Seite außerhalb dieser Seite weitergeleitet, wo eine zusätzliche Datenschutzerklärung und Nutzungsbedingungen gelten.",
+      "review" : "Rezension",
+      "subscription" : "ABONNEMENT",
+      "switch_to_yearly" : "AUF JÄHRLICH STELLEN",
+      "todays_total" : "Die heutige Gesamtsumme",
+      "year" : "Jahr",
+      "yearly" : "Jährlich",
+      "yearly_benefit_msg" : "Zwei Monate KOSTENLOS bei jährlicher Zahlung!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "ANWENDEN",
+      "back" : "Zurück",
+      "cancel" : "Abbrechen",
+      "contact_support" : "Kontaktieren Sie Support",
+      "continue" : "Weitermachen",
+      "delete" : "Löschen",
+      "log_out" : "Ausloggen",
+      "manage" : "Verwalten",
+      "more" : "Mehr",
+      "next" : "Nächste",
+      "privacy_policy" : "Datenschutzerklärung",
+      "publish" : "Veröffentlichen",
+      "save" : "Speichern",
+      "skip" : "Überspringen",
+      "submit" : "Einreichen",
+      "terms_and_conditions" : "Allgemeine Geschäftsbedingungen",
+      "unpublish" : "Veröffentlichung aufheben",
+      "upgrade" : "AKTUALISIERUNG"
+    },
+    "feature_name" : {
+      "coaching" : "Ausbildung",
+      "events" : "Ereignisse",
+      "home" : "Heim"
+    },
+    "field_label" : {
+      "address" : "Adresse",
+      "address1" : "Anschrift Zeile 1",
+      "address2" : "Adresszeile 2",
+      "city" : "Stadt",
+      "company_name" : "Name der Firma",
+      "confirm_new_password" : "Bestätige neues Passwort",
+      "confirm_password" : "Bestätige das Passwort",
+      "country" : "Land",
+      "email" : "Email",
+      "first_name" : "Vorname",
+      "group_code" : "Gruppencode",
+      "last_name" : "Nachname",
+      "new_password" : "Neues Kennwort",
+      "password" : "Passwort",
+      "phone" : "Telefonnummer",
+      "platform" : "Plattform",
+      "social" : "Sozial",
+      "state_province" : "Staat oder Provinz",
+      "title_person" : "Titel",
+      "zip_postal_code" : "Postleitzahl"
+    },
+    "notice" : {
+      "default_error_msg" : "Etwas ist schief gelaufen. Bitte versuche es erneut.",
+      "enter" : "Eingeben",
+      "error_code" : "Fehlercode",
+      "incorrect_password" : "Falsches Passwort",
+      "information" : "Information",
+      "invalid" : "Ungültig",
+      "invalid_country_code" : "Ungültiger Ländercode",
+      "invalid_email_msg" : "Email ist ungültig. Bitte überprüfen Sie das Format oder verwenden Sie eine andere E-Mail.",
+      "invalid_phone_msg" : "Ungültige Telefonnummer. Nur Zahlen und ( ) – erlaubt.",
+      "invalid_phone_number" : "Ungültige Telefonnummer",
+      "loading" : "Wird geladen",
+      "no_contacts_to_display" : "Es sind keine Kontakte zum Anzeigen vorhanden",
+      "no_data_available" : "Keine Daten verfügbar",
+      "page_not_found" : "Wir können diese Seite auf dem Server nicht finden.",
+      "password_do_not_match" : "Die eingegebenen Passwörter stimmen nicht überein.",
+      "password_minimum" : "Das Passwort muss mindestens 6 Zeichen lang sein",
+      "required" : "Erforderlich",
+      "servers_unavailable" : "Verbindung zu Servern nicht verfügbar. Überprüfen Sie Ihre Verbindung. Bitte wenden Sie sich an den Support, wenn das Problem weiterhin besteht.",
+      "success" : "Erfolg",
+      "unknown_email" : "Manche E-Mails lassen sich nur schwer bestätigen. Überprüfen Sie sie zur Sicherheit noch einmal.",
+      "warning" : "Warnung"
+    },
+    "text" : {
+      "and" : "und",
+      "ok" : "OK",
+      "published" : "Veröffentlicht",
+      "thanks" : "Danke",
+      "yes" : "Ja"
+    },
+    "title" : {
+      "select_language" : "Wählen Sie App-Sprache"
+    },
+    "user_level" : {
+      "pro" : "PRO",
+      "standard" : "STANDARD"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "Personalisierung und Benachrichtigungen",
+      "sub_header_msg" : "Sie können diese Informationen jederzeit in Ihren Einstellungen aktualisieren."
+    },
+    "biometrics" : {
+      "header_msg" : "Melden Sie sich mit Ihren biometrischen Daten an",
+      "sub-header_msg" : "Berühren Sie den Fingerabdrucksensor"
+    },
+    "button" : {
+      "back_to_login" : "Zurück zum Anmeldebildschirm",
+      "create_account" : "Neuen Account erstellen",
+      "fingerprint" : "Fingerabdruck",
+      "forgot_password" : "Passwort vergessen?",
+      "get_started" : "Loslegen",
+      "log_in" : "Anmeldung",
+      "request_again" : "Nochmals anfordern",
+      "set_password" : "Passwort festlegen",
+      "verify" : "Verifizieren"
+    },
+    "choose_account" : "Wählen Sie Konto",
+    "create_account" : "Benutzerkonto erstellen",
+    "create_password" : "Passwort erstellen",
+    "create_pwd" : {
+      "header_msg" : "Freut mich, Sie kennenzulernen",
+      "sub_header_msg" : "Dies ist Ihr RapidFunnel-Benutzername"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "Haben Sie Probleme beim Einloggen?",
+      "login_msg" : "Verwenden Sie zum Anmelden Ihre E-Mail-Adresse und Ihr Passwort.",
+      "need_new_acct_msg" : "Müssen Sie ein neues Konto erstellen? klicken Sie hier",
+      "welcome_back" : "Willkommen zurück"
+    },
+    "enter_email" : {
+      "header_msg" : "Geben Sie Ihre E-Mail-Adresse ein. Sie verwenden diese zum Anmelden."
+    },
+    "enter_password" : "Passwort eingeben",
+    "field_label" : {
+      "username_field" : "E-Mail-Adresse"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "Benutzer im Konto erstellen:",
+      "header_msg" : "Vorhandener Benutzer gefunden für:",
+      "welcome_back" : "Willkommen zurück"
+    },
+    "group_code" : {
+      "header_msg" : "Holen Sie sich alle Inhalte für Ihr Unternehmen. Geben Sie Ihren Gruppencode ein.",
+      "header_msg_desktop" : "Holen Sie sich alle Inhalte für Ihr Unternehmen. Geben Sie Ihren Gruppencode ein.",
+      "sub_header_msg" : "Sie kennen Ihren Gruppencode nicht? Fragen Sie Ihren Vorgesetzten oder wenden Sie sich an den Support."
+    },
+    "info_review" : {
+      "enable_finger_print" : "Aktivieren Sie Fingerabdruck/Touch ID",
+      "header_msg" : "Informationsüberprüfung",
+      "i_agree_to_the" : "Ich stimme dem zu",
+      "i_agree_to_the_privacy" : "Ich stimme der <a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">Datenschutzerklärung</a> zu",
+      "i_agree_to_the_terms" : "Ich stimme den <a href=\"https://www.rapidfunnel.com/terms-conditions\">Allgemeinen Geschäftsbedingungen</a> zu"
+    },
+    "last_successful_login" : "Letzte erfolgreiche Anmeldung",
+    "login" : "Anmeldung",
+    "login_remember_pwd" : "Passwort merken",
+    "no_account_found" : {
+      "header_msg" : "Mit diesen Informationen wurde kein Konto gefunden."
+    },
+    "notice" : {
+      "existing_user_in_account" : "In diesem Konto ist bereits ein Benutzer mit dieser E-Mail vorhanden.",
+      "general_user_create_error" : "Beim Erstellen Ihres Kontos ist ein unbekannter Fehler aufgetreten. Wenden Sie sich an den Support.",
+      "incorrect_email_pwd_msg" : "Falsche E-Mail-Adresse oder falsches Passwort. Bitte versuchen Sie es erneut.",
+      "invalid_group" : "Ungültiger Gruppencode",
+      "no_matching_email" : "Mit dieser E-Mail wurde kein Benutzer gefunden. Bitte versuchen Sie es mit einer anderen E-Mail-Adresse oder wenden Sie sich an den Support.",
+      "restricted_group_code" : "Dieser Gruppencode kann bei der Anmeldung nicht verwendet werden.",
+      "user_already_exists" : "Benutzer existiert bereits. Melden Sie sich an oder verwenden Sie eine andere E-Mail-Adresse."
+    },
+    "or_divider" : "Oder",
+    "personalize_app" : {
+      "header_msg" : "Personalisieren Sie Ihre App. Wie heißen Sie?"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "Herzlichen Glückwunsch!\nIhr Konto ist bereit!",
+      "for_best_experience_msg" : "Für das beste Erlebnis verwenden Sie unsere mobile App.",
+      "get_the_mobile_app" : "Holen Sie sich die mobile App",
+      "header" : "Glückwunsch!",
+      "login_with_browser" : "Melden Sie sich mit dem Browser an",
+      "remember_to_login_with" : "Denken Sie daran, sich anzumelden mit:",
+      "send_me_the_link" : "Schick mir den Link",
+      "sub_head" : "Ihr Konto ist aktiv!"
+    },
+    "remember_pwd_msg" : "Merken Sie sich Ihr Passwort! Sie benötigen es, um sich anzumelden.",
+    "reset_password" : {
+      "enter_code" : "Code eingeben",
+      "field_label" : {
+        "secret_code" : "Geheim Code"
+      },
+      "header" : "Anweisungen zum Zurücksetzen des Passworts für dieses Konto senden?",
+      "invalid_code" : "Ungültiger Code",
+      "message" : "Suchen Sie in Ihrer E-Mail nach dem Reset-Code.",
+      "resend_code" : "Code erneut senden",
+      "set_new_password" : "Neues Passwort festlegen",
+      "success_msg" : "Passwort geändert. Melden Sie sich mit neuem Passwort an."
+    },
+    "reset_password_msg" : "Zurücksetzen und ein temporäres Passwort für dieses Konto senden?",
+    "reset_pwd_link_sent_msg" : "Link gesendet. Überprüfen Sie Ihre E-Mails. (einschließlich SPAM-Ordner)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "Handynummer eingeben",
+      "header" : "Laden Sie die mobile App herunter",
+      "select_device" : "Gerät auswählen",
+      "send_me_the_app" : "Schick mir die App",
+      "sub_head" : "Sie erhalten einmalig eine SMS mit dem Link zum Download der App."
+    },
+    "set_up_new" : {
+      "header_msg" : "Richten Sie in wenigen Schritten ein neues ein!"
+    },
+    "update_pwd" : {
+      "header_msg" : "Wir haben unser System aktualisiert!",
+      "improve_exp_msg" : "Um Ihr Anmeldeerlebnis zu verbessern, können Sie jetzt ein Passwort für alle Ihre Konten verwenden.",
+      "multi_acct_msg" : "Sie haben mehr als ein Konto, das diese E-Mail-Adresse verwendet"
+    },
+    "verify_phone" : {
+      "header_msg" : "Telefon bestätigen",
+      "receive_code_msg" : "Code nicht erhalten?",
+      "sub_header_msg" : "Code gesendet an:"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "Für diese E-Mail existiert kein Benutzer. Stellen Sie sicher, dass Sie über ein Konto und eine aktive Herausforderung in der WEDO Transformations-App verfügen. Bitte versuchen Sie es mit einer alternativen E-Mail-Adresse oder wenden Sie sich an Ihren Sponsor, um Hilfe zu erhalten."
+    },
+    "welcome" : {
+      "header_msg" : "Willkommen zu",
+      "sub_header_msg" : "Verwalten Sie Beziehungen nahtlos und bauen Sie Ihr Unternehmen aus."
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "Aktionsname",
+      "notice" : {
+        "action_name_blank_msg" : "Geben Sie den Aktionsnamen ein",
+        "action_needed_msg" : "Für den Übergang sind Maßnahmen erforderlich"
+      },
+      "title" : "Neue Aktion hinzufügen"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "Verzögerungsname",
+      "delay_time" : "Verzögerungszeit",
+      "delay_time_unit" : "Verzögerungszeiteinheit",
+      "notice" : {
+        "delay_name_blank_msg" : "Geben Sie den Verzögerungsnamen ein",
+        "delay_unit_blank_msg" : "Geben Sie die Verzögerungszeiteinheit ein",
+        "time_blank_msg" : "Geben Sie die Verzögerungszeit ein"
+      },
+      "title" : "Neue Verzögerung hinzufügen"
+    },
+    "add_response_modal" : {
+      "response_name" : "Antwortname",
+      "title" : "Neue Antwort hinzufügen"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "Geben Sie den Künstlernamen ein"
+      },
+      "stage_name" : "Künstlername",
+      "title" : "Neue Stufe hinzufügen"
+    },
+    "button" : {
+      "add_action" : "Aktion hinzufügen",
+      "add_delay" : "Verzögerung hinzufügen",
+      "add_new" : "Neue hinzufügen",
+      "add_response" : "Antwort hinzufügen",
+      "add_stage" : "Bühne hinzufügen",
+      "new_smartconnector" : "Neuer SmartConnector"
+    },
+    "delete_confirmation_msg" : "Sind Sie sicher, dass Sie diesen SmartConnector löschen möchten?",
+    "label" : {
+      "edit_action" : "Aktion bearbeiten",
+      "edit_stage" : "Bühne bearbeiten"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "Es sind Maßnahmen erforderlich, um Kontakte in jeder Phase umzustellen",
+      "no_stages_msg" : "Für diesen SmartConnector wurden keine Stufen gefunden"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "Anzahl der aktiven und inaktiven Kontakte in jeder Phase",
+      "avg_transition_graph" : "Durchschnittliche Übergangszeit für Kontakte in jeder Phase",
+      "contact_conversion_graph_title" : "Kontaktkonvertierung ab der ersten Stufe",
+      "contacts_transition_percent" : "Kontakte umgestellt",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "Anzahl der Kontakte"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "Stufen"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "Kontoebene",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "Aus Galerie hochladen",
+        "new_photo" : "Neues Foto von der Kamera"
+      }
+    },
+    "links" : {
+      "meeting_link" : "Link zum Treffen",
+      "my_website" : "Meine Webseite"
+    },
+    "my_info" : {
+      "custom_fields" : "Benutzerdefinierte Felder"
+    },
+    "settings" : {
+      "app_language" : "App-Sprache",
+      "delete_account" : "Konto löschen",
+      "group_code" : "Gruppencodes",
+      "group_codes" : {
+        "add_a_group_code" : "Fügen Sie einen Gruppencode hinzu",
+        "delete_group_code_msg" : "Möchten Sie den Gruppencode wirklich entfernen?",
+        "existing_group_msg" : "Sie sind bereits in dieser Gruppe."
+      },
+      "notification_settings" : "Benachrichtigungseinstellungen",
+      "reset_defaults" : "Standardeinstellungen zurückzusetzen",
+      "security" : "Sicherheit",
+      "time_zone" : "Zeitzone",
+      "training_partner" : "Trainingspartner",
+      "user_alias" : "Benutzeralias",
+      "user_alias_tooltip" : "Dieser Alias wird zur Personalisierung der Links verwendet, die Sie an Ihre Kontakte senden."
+    },
+    "tabs" : {
+      "links" : "Links",
+      "my_info" : "Meine Information",
+      "settings" : "Einstellungen"
+    }
+  }
+}

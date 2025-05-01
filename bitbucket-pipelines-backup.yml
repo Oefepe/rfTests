@@ -1,0 +1,248 @@
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: alpine:3.16
+
+definitions:
+  services:
+    docker:
+      memory: 4096
+      
+  steps:
+    - step: &run-eslint
+        name: ESLINT
+        script:
+          - cd ../frontend
+          - node_modules/.bin/eslint . --ext .tsx
+
+    - step: &test
+        name: Test
+        script:
+          - npm install
+          - npm test
+
+    - step: &build_image
+        name: Build Frontend & Backend docker image along with codebase
+        deployment: Test
+        services:
+          - docker
+        size: 2x
+        caches:
+          - docker
+          - pip
+        script:
+          # aws ecr get-login-password --region $AWS_ECR_REGION | docker login --username $AWS_ECR_USERNAME --password-stdin $AWS_ECR_PASSWORD
+
+          - > 
+            if [ $REGISTRY == 'AWS' ]; then
+              echo "Authenticate with the AWS ECR";
+            
+              apk add py3-pip
+              pip -V
+              pip3 install awscli
+              aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+              aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+              eval $(aws ecr get-login --no-include-email --region ${AWS_ECR_REGION} | sed 's;https://;;g')
+              cat /root/.docker/config.json
+
+              REGISTRY_ACCOUNT=$AWS_ECR_ACCOUNT
+              
+            else
+              echo "Authenticate with the Docker Hub registry";
+              docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+
+              REGISTRY_ACCOUNT=$DOCKER_ACCOUNT
+            fi
+          
+          - echo $REGISTRY_ACCOUNT
+          
+          # Build Backend docker image
+          - cd backend
+          - BACKEND_IMAGE=$REGISTRY_ACCOUNT/$TST_BACKEND_REPO_NAME:$BITBUCKET_COMMIT
+          - docker build -f ./Dockerfile.kub -t ${BACKEND_IMAGE} . 
+          - docker push $BACKEND_IMAGE
+          - echo "BACKEND_IMAGE - ${BACKEND_IMAGE}"
+
+          # Build Frontend docker image
+          - cd ../frontend
+          - FRONTEND_IMAGE=$REGISTRY_ACCOUNT/$TST_FRONTEND_REPO_NAME:$BITBUCKET_COMMIT
+          - docker build -f ./Dockerfile.kub -t ${FRONTEND_IMAGE} . 
+          - docker push $FRONTEND_IMAGE
+          - echo "FRONTEND_IMAGE - ${FRONTEND_IMAGE}"
+          
+          - cd ..
+
+          - echo "export BACKEND_IMAGE=$BACKEND_IMAGE" >> set_env.sh
+          - echo "export FRONTEND_IMAGE=$FRONTEND_IMAGE" >> set_env.sh
+          - echo "export AWS_EKS_REGION=$TST_AWS_EKS_REGION" >> set_env.sh
+          - echo "export CLUSTER_NAME=$TST_CLUSTER_NAME" >> set_env.sh
+
+        artifacts:
+           - set_env.sh
+
+    - step: &build-db-images
+        name: Build MySql & MongoDB Images
+        deployment: Test
+        services:
+          - docker
+        size: 2x
+        caches:
+          - docker
+          - pip
+        script:
+          # aws ecr get-login-password --region $AWS_ECR_REGION | docker login --username $AWS_ECR_USERNAME --password-stdin $AWS_ECR_PASSWORD
+
+          - > 
+            if [ $REGISTRY == 'AWS' ]; then
+              echo "Authenticate with the AWS ECR";
+            
+              apk add py3-pip
+              pip -V
+              pip3 install awscli
+              aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+              aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+              eval $(aws ecr get-login --no-include-email --region ${AWS_ECR_REGION} | sed 's;https://;;g')
+              cat /root/.docker/config.json
+
+              REGISTRY_ACCOUNT=$AWS_ECR_ACCOUNT
+              
+            else
+              echo "Authenticate with the Docker Hub registry";
+              docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+
+              REGISTRY_ACCOUNT=$DOCKER_ACCOUNT
+            fi
+          
+          - echo $REGISTRY_ACCOUNT
+          
+          # Build mysql docker image
+          - cd dockerFiles/mysql
+          - MYSQL_IMAGE="${REGISTRY_ACCOUNT}/${TST_MYSQL_ECR_REPO_TAG}"
+          - docker build -t ${MYSQL_IMAGE} . 
+          - docker push $MYSQL_IMAGE
+          - echo "MYSQL_IMAGE - ${MYSQL_IMAGE}"
+
+          # Build mongo docker image
+          - cd ../mongo
+          - MONGO_IMAGE="${REGISTRY_ACCOUNT}/${TST_MONGO_ECR_REPO_TAG}"
+          - docker build -t ${MONGO_IMAGE} . 
+          - docker push $MONGO_IMAGE
+          - echo "MONGO_IMAGE - ${MONGO_IMAGE}"
+
+    - step: &deploy-aws-eks
+        name: Deploy to AWS EKS
+        script:
+          - source set_env.sh
+          - sed -i "s|{{BACKEND_IMAGE}}|$BACKEND_IMAGE|g" eks/eks-deploy.yaml
+          - sed -i "s|{{FRONTEND_IMAGE}}|$FRONTEND_IMAGE|g" eks/eks-deploy.yaml
+          - cat eks/eks-deploy.yaml
+
+          - pipe: atlassian/aws-eks-kubectl-run:2.2.1
+            variables:
+              AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+              AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+              AWS_DEFAULT_REGION: ${AWS_EKS_REGION}
+              CLUSTER_NAME: ${CLUSTER_NAME}
+              KUBECTL_COMMAND: 'apply'
+              RESOURCE_PATH: 'eks/eks-deploy.yaml'
+              DEBUG: "true"
+
+    - step: &delete-eks-deployment
+        name: Delete EKS Deployment
+        deployment: Test
+        script:
+          - BACKEND_IMAGE=$REGISTRY_ACCOUNT/$TST_BACKEND_REPO_NAME:$BITBUCKET_COMMIT
+          - FRONTEND_IMAGE=$REGISTRY_ACCOUNT/$TST_FRONTEND_REPO_NAME:$BITBUCKET_COMMIT
+          
+          - sed -i "s|{{BACKEND_IMAGE}}|$BACKEND_IMAGE|g" eks/eks-deploy.yaml
+          - sed -i "s|{{FRONTEND_IMAGE}}|$FRONTEND_IMAGE|g" eks/eks-deploy.yaml
+          - cat eks/eks-deploy.yaml
+
+          - pipe: atlassian/aws-eks-kubectl-run:2.2.1
+            variables:
+              AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+              AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+              AWS_DEFAULT_REGION: ${TST_AWS_EKS_REGION}
+              CLUSTER_NAME: ${TST_CLUSTER_NAME}
+              KUBECTL_COMMAND: 'delete -f eks/eks-deploy.yaml'
+              DEBUG: "true"
+
+    - step: &create-eks-cluster
+        name: Create EKS Cluster With Node Group
+        deployment: Test
+        caches:
+          - pip
+        script:
+          - apk add py3-pip
+          - pip -V
+          - pip3 install awscli
+          - aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+          - aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+
+          - aws eks create-cluster --name ${TST_CLUSTER_NAME} --region ${TST_AWS_EKS_REGION} 
+            --role-arn ${TST_EKS_CLUSTER_ROLE} 
+            --resources-vpc-config subnetIds=${TST_EKS_VPC_SUBNETS} 
+            --logging '{"clusterLogging":[{"types":["api"],"enabled":true}, {"types":["audit","authenticator","controllerManager","scheduler"],"enabled":false}]}' 
+            --tags name=eks-cluster 
+            --kubernetes-version ${TST_EKS_KUBERNETES_VERSION}
+          - aws eks wait cluster-active --name ${TST_CLUSTER_NAME} --region ${TST_AWS_EKS_REGION}
+            && 
+            aws eks create-nodegroup --cluster-name ${TST_CLUSTER_NAME} --nodegroup-name ${TST_CLUSTER_NAME}-node 
+            --region ${TST_AWS_EKS_REGION} 
+            --kubernetes-version ${TST_EKS_KUBERNETES_VERSION} 
+            --scaling-config minSize=1,maxSize=2,desiredSize=1 --disk-size 20 
+            --subnets ${TST_EKS_NODE_SUBNETS}
+            --instance-types ${TST_EKS_NODE_INSTANCE_TYPES} --ami-type AL2_x86_64 
+            --remote-access ec2SshKey=${TST_EKS_SSH_KEY},sourceSecurityGroups=${TST_EKS_NODE_SG} 
+            --node-role ${TST_EKS_NODE_ROLE} 
+            --tags name=eks-cluster-node 
+            && 
+            aws eks wait nodegroup-active --cluster-name ${TST_CLUSTER_NAME} --nodegroup-name ${TST_CLUSTER_NAME}-node --region ${TST_AWS_EKS_REGION}
+
+    - step: &delete-eks-cluster
+        name: Delete EKS Cluster With Node Group
+        deployment: Test
+        caches:
+          - pip
+        script:
+          - apk add py3-pip
+          - pip -V
+          - pip3 install awscli
+          - aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+          - aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+
+          - aws eks delete-nodegroup --region ${TST_AWS_EKS_REGION} --cluster-name ${TST_CLUSTER_NAME} --nodegroup-name ${TST_CLUSTER_NAME}-node 
+          - aws eks wait nodegroup-deleted --cluster-name ${TST_CLUSTER_NAME} --nodegroup-name ${TST_CLUSTER_NAME}-node --region ${TST_AWS_EKS_REGION}
+            && aws eks delete-cluster --region ${TST_AWS_EKS_REGION} --name ${TST_CLUSTER_NAME} 
+            && aws eks wait cluster-deleted --name ${TST_CLUSTER_NAME} --region ${TST_AWS_EKS_REGION}
+
+options:
+  docker: true
+  size: 2x
+
+pipelines:
+  custom:
+    check-code-quality:
+      - step: *build_image
+      - step: *run-eslint
+
+    deploy-app-to-eks:
+      # - step: *test
+      - step: *build_image
+      - step: *deploy-aws-eks
+    
+    create-eks-cluster:
+      - step: *create-eks-cluster
+
+    # create-eks-cluster-deploy:
+    #   - step: *create-eks-cluster
+    #   - step: *build_image
+    #   - step: *deploy-aws-eks
+
+    terminate-eks-cluster:
+      - step: *delete-eks-cluster
+
+    delete-eks-deployment:
+      - step: *delete-eks-deployment
+
+    build-db-images:
+      - step: *build-db-images
+

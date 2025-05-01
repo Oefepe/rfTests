@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "เพิ่มวิธีการชำระเงิน",
+      "credit_or_debit" : "บัตรเครดิตหรือบัตรเดบิต",
+      "delete_account" : "ลบบัญชี",
+      "pay_and_upgrade" : "ชำระเงินและอัปเกรด"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "คุณแน่ใจไหม?",
+      "main_message" : "การสมัครสมาชิกรายเดือนของคุณจะได้รับการชำระเงินจนถึงสิ้นช่วงเวลาที่เรียกเก็บเงินของคุณ หากคุณต้องการดำเนินการยกเลิกการสมัครสมาชิกของคุณเมื่อสิ้นสุดระยะเวลา โปรดคลิก \"ใช่ ดำเนินการต่อ\" ด้านล่างเพื่อไปยังหน้าจอถัดไป\n\nเมื่อคุณยกเลิกการสมัครสมาชิก คุณจะสูญเสียการเข้าถึงบัญชีของคุณทั้งหมด รวมถึง:",
+      "subscription_cancelled_message" : "การสมัครของคุณถูกยกเลิกแล้ว"
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "เราเสียใจที่เห็น\nคุณไป!",
+      "main_message" : "ความคิดเห็นของคุณมีค่า! โปรดสละเวลาสักครู่เพื่อบอกเหตุผลที่คุณยกเลิกและความคิดเห็นอื่นๆ",
+      "notice_alert" : "การสมัครของคุณถูกยกเลิก หลังจากวันที่ 30 เมษายน 2023 จะไม่มีการใช้งานอีกต่อไป"
+    },
+    "field_label" : {
+      "card_number" : "หมายเลขบัตร",
+      "coupon" : "คูปอง",
+      "cvv_code" : "รหัส CVV",
+      "expiration_date" : "วันหมดอายุ (เดือน/ปปปป)",
+      "month" : "เดือน",
+      "name_on_card" : "ชื่อบนบัตร",
+      "year" : "ปี"
+    },
+    "offer_badge" : {
+      "best" : "ดีที่สุด",
+      "deal" : "ข้อเสนอ"
+    },
+    "payment_method" : {
+      "credit_card" : "บัตรเครดิต",
+      "paypal" : "เพย์พาล"
+    },
+    "plans_pricing" : {
+      "headline" : "ทุกอย่างใน Standard plus..."
+    },
+    "remove_payment_modal" : {
+      "message" : "คุณแน่ใจหรือไม่ว่าต้องการลบวิธีการชำระเงินนี้"
+    },
+    "remove_payment_model" : {
+      "headline" : "ลบวิธีการชำระเงิน"
+    },
+    "text" : {
+      "agree_to_term_msg" : "การคลิกชำระเงินและอัปเกรดแสดงว่าคุณยอมรับนโยบายด้านล่าง",
+      "authorize_cc_msg" : "ฉันอนุญาตให้ RapidFunnel Inc. เรียกเก็บเงินจากบัญชีของฉันตามจำนวนนี้",
+      "cancel_subscription" : "ยกเลิกการสมัครสมาชิก",
+      "current_payment_method" : "วิธีการชำระเงินปัจจุบัน",
+      "month" : "เดือน",
+      "monthly" : "รายเดือน",
+      "next_billing_amount" : "จำนวนเงินที่เรียกเก็บเงินถัดไป",
+      "next_billing_date" : "วันที่เรียกเก็บเงินครั้งถัดไป",
+      "payment" : "การชำระเงิน",
+      "payment_history" : "ประวัติการชำระเงิน",
+      "payment_method" : "วิธีการชำระเงิน",
+      "paypal_msg" : "เมื่อเลือกชำระเงินด้วย \"PayPal\" คุณจะถูกนำออกจากหน้านี้ ซึ่งจะมีการบังคับใช้นโยบายความเป็นส่วนตัวและข้อกำหนดการใช้งานเพิ่มเติม",
+      "review" : "ทบทวน",
+      "subscription" : "สมัครสมาชิก",
+      "switch_to_yearly" : "เปลี่ยนเป็นรายปี",
+      "todays_total" : "ยอดรวมของวันนี้",
+      "year" : "ปี",
+      "yearly" : "เป็นประจำทุกปี",
+      "yearly_benefit_msg" : "ฟรีสองเดือนโดยจ่ายเป็นรายปี!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "นำมาใช้",
+      "back" : "กลับ",
+      "cancel" : "ยกเลิก",
+      "contact_support" : "ติดต่อฝ่ายสนับสนุน",
+      "continue" : "ดำเนินการต่อ",
+      "delete" : "ลบ",
+      "log_out" : "ออกจากระบบ",
+      "manage" : "จัดการ",
+      "more" : "มากกว่า",
+      "next" : "ต่อไป",
+      "privacy_policy" : "นโยบายความเป็นส่วนตัว",
+      "publish" : "เผยแพร่",
+      "save" : "บันทึก",
+      "skip" : "ข้าม",
+      "submit" : "ส่ง",
+      "terms_and_conditions" : "ข้อกำหนดและเงื่อนไข",
+      "unpublish" : "ยกเลิกการเผยแพร่",
+      "upgrade" : "อัปเกรด"
+    },
+    "feature_name" : {
+      "coaching" : "การฝึกสอน",
+      "events" : "กิจกรรม",
+      "home" : "บ้าน"
+    },
+    "field_label" : {
+      "address" : "ที่อยู่",
+      "address1" : "ที่อยู่บรรทัดที่ 1",
+      "address2" : "ที่อยู่บรรทัดที่ 2",
+      "city" : "เมือง",
+      "company_name" : "ชื่อ บริษัท",
+      "confirm_new_password" : "ยืนยันรหัสผ่านใหม่",
+      "confirm_password" : "ยืนยันรหัสผ่าน",
+      "country" : "ประเทศ",
+      "email" : "อีเมล",
+      "first_name" : "ชื่อจริง",
+      "group_code" : "รหัสกลุ่ม",
+      "last_name" : "นามสกุล",
+      "new_password" : "รหัสผ่านใหม่",
+      "password" : "รหัสผ่าน",
+      "phone" : "โทรศัพท์",
+      "platform" : "แพลตฟอร์ม",
+      "social" : "ทางสังคม",
+      "state_province" : "รัฐหรือจังหวัด",
+      "title_person" : "ชื่อ",
+      "zip_postal_code" : "รหัสไปรษณีย์"
+    },
+    "notice" : {
+      "default_error_msg" : "บางอย่างผิดพลาด. กรุณาลองอีกครั้ง.",
+      "enter" : "เข้า",
+      "error_code" : "รหัสข้อผิดพลาด",
+      "incorrect_password" : "รหัสผ่านผิดพลาด",
+      "information" : "ข้อมูล",
+      "invalid" : "ไม่ถูกต้อง",
+      "invalid_country_code" : "รหัสประเทศไม่ถูกต้อง",
+      "invalid_email_msg" : "อีเมลไม่ถูกต้อง โปรดตรวจสอบรูปแบบหรือใช้อีเมลอื่น",
+      "invalid_phone_msg" : "หมายเลขโทรศัพท์ไม่ถูกต้อง อนุญาตเฉพาะตัวเลขและ ( ) - เท่านั้น",
+      "invalid_phone_number" : "หมายเลขโทรศัพท์ไม่ถูกต้อง",
+      "loading" : "กำลังโหลด",
+      "no_contacts_to_display" : "ไม่มีที่อยู่ติดต่อที่จะแสดง",
+      "no_data_available" : "ไม่มีข้อมูลที่สามารถใช้ได้",
+      "page_not_found" : "เราไม่พบหน้านี้บนเซิร์ฟเวอร์",
+      "password_do_not_match" : "รหัสผ่านที่ป้อนไม่ได้\nจับคู่.",
+      "password_minimum" : "รหัสผ่านต้องมีขั้นต่ำ\n6 ตัวอักษร",
+      "required" : "ต้องระบุชื่อเรื่อง",
+      "servers_unavailable" : "การเชื่อมต่อกับเซิร์ฟเวอร์ไม่พร้อมใช้งาน ตรวจสอบการเชื่อมต่อของคุณ โปรดติดต่อฝ่ายสนับสนุนหากปัญหายังคงมีอยู่",
+      "success" : "ความสำเร็จ",
+      "unknown_email" : "อีเมลบางฉบับยืนยันได้ยาก! ตรวจสอบอีกครั้งในกรณี",
+      "warning" : "คำเตือน"
+    },
+    "text" : {
+      "and" : "และ",
+      "ok" : "ตกลง",
+      "published" : "ที่ตีพิมพ์",
+      "thanks" : "ขอบคุณ",
+      "yes" : "ใช่"
+    },
+    "title" : {
+      "select_language" : "เลือกภาษาของแอป"
+    },
+    "user_level" : {
+      "pro" : "มือโปร",
+      "standard" : "มาตรฐาน"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "การปรับเปลี่ยนในแบบของคุณและการแจ้งเตือน",
+      "sub_header_msg" : "คุณจะอัปเดตข้อมูลนี้ได้ทุกเมื่อในการตั้งค่า"
+    },
+    "biometrics" : {
+      "header_msg" : "เข้าสู่ระบบด้วยไบโอเมตริกซ์ของคุณ",
+      "sub-header_msg" : "แตะเซ็นเซอร์ลายนิ้วมือ"
+    },
+    "button" : {
+      "back_to_login" : "กลับไปที่หน้าจอเข้าสู่ระบบ",
+      "create_account" : "สร้างบัญชีใหม่",
+      "fingerprint" : "ลายนิ้วมือ",
+      "forgot_password" : "ลืมรหัสผ่าน?",
+      "get_started" : "เริ่ม",
+      "log_in" : "เข้าสู่ระบบ",
+      "request_again" : "ขออีกครั้ง",
+      "set_password" : "ตั้งรหัสผ่าน",
+      "verify" : "ตรวจสอบ"
+    },
+    "choose_account" : "เลือกบัญชี",
+    "create_account" : "สร้างบัญชี",
+    "create_password" : "สร้างรหัสผ่าน",
+    "create_pwd" : {
+      "header_msg" : "ยินดีที่ได้รู้จัก",
+      "sub_header_msg" : "นี่คือชื่อผู้ใช้ RapidFunnel ของคุณ"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "มีปัญหาในการลงชื่อเข้าใช้?",
+      "login_msg" : "ใช้ที่อยู่อีเมลและรหัสผ่านของคุณเพื่อเข้าสู่ระบบ",
+      "need_new_acct_msg" : "จำเป็นต้องสร้างบัญชีใหม่หรือไม่? คลิกที่นี่",
+      "welcome_back" : "ยินดีต้อนรับกลับ"
+    },
+    "enter_email" : {
+      "header_msg" : "กรอกอีเมลของคุณ คุณจะใช้ในการเข้าสู่ระบบ"
+    },
+    "enter_password" : "ใส่รหัสผ่าน",
+    "field_label" : {
+      "username_field" : "อีเมลหรือหมายเลขโทรศัพท์"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "สร้างผู้ใช้ในบัญชี:",
+      "header_msg" : "พบผู้ใช้ที่มีอยู่สำหรับ:",
+      "welcome_back" : "ยินดีต้อนรับกลับ"
+    },
+    "group_code" : {
+      "header_msg" : "รับเนื้อหาทั้งหมดสำหรับบริษัทของคุณ ป้อนรหัสกลุ่มของคุณ",
+      "header_msg_desktop" : "รับเนื้อหาทั้งหมดสำหรับบริษัทของคุณ ป้อนรหัสกลุ่มของคุณ",
+      "sub_header_msg" : "ไม่ทราบรหัสกลุ่มของคุณ?\nถามผู้นำของคุณหรือ"
+    },
+    "info_review" : {
+      "enable_finger_print" : "เปิดใช้งานลายนิ้วมือ / ID สัมผัส",
+      "header_msg" : "การทบทวนข้อมูล",
+      "i_agree_to_the" : "ฉันเห็นด้วยกับ",
+      "i_agree_to_the_privacy" : "ฉันยอมรับ<a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">นโยบายความเป็นส่วนตัว</a>",
+      "i_agree_to_the_terms" : "ฉันเห็นด้วยกับ"
+    },
+    "last_successful_login" : "เข้าสู่ระบบสำเร็จครั้งล่าสุด",
+    "login" : "เข้าสู่ระบบ",
+    "login_remember_pwd" : "จดจำรหัสผ่าน",
+    "no_account_found" : {
+      "header_msg" : "ไม่พบบัญชีที่มีข้อมูลดังกล่าว"
+    },
+    "notice" : {
+      "existing_user_in_account" : "มีผู้ใช้ที่ใช้อีเมลนี้อยู่แล้วในบัญชีนี้",
+      "general_user_create_error" : "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุขณะสร้างบัญชีของคุณ ติดต่อฝ่ายสนับสนุน",
+      "incorrect_email_pwd_msg" : "อีเมลหรือรหัสผ่านไม่ถูกต้อง โปรดลองอีกครั้ง",
+      "invalid_group" : "รหัสกลุ่มไม่ถูกต้อง",
+      "no_matching_email" : "ไม่พบผู้ใช้ที่ใช้อีเมลนั้น โปรดลองใช้ที่อยู่อีเมลอื่นหรือติดต่อฝ่ายสนับสนุน",
+      "restricted_group_code" : "รหัสกลุ่มนี้ไม่สามารถใช้ได้ในระหว่างการสมัคร",
+      "user_already_exists" : "มีผู้ใช้นี้อยู่แล้ว. เข้าสู่ระบบหรือใช้อีเมลอื่น"
+    },
+    "or_divider" : "หรือ",
+    "personalize_app" : {
+      "header_msg" : "ปรับแต่งแอปของคุณ\nคุณชื่ออะไร?"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "ยินดีด้วย!\nบัญชีของคุณพร้อมแล้ว!",
+      "for_best_experience_msg" : "เพื่อประสบการณ์ที่ดีที่สุด ให้ใช้แอพมือถือของเรา",
+      "get_the_mobile_app" : "รับแอพมือถือ",
+      "header" : "ยินดีด้วย!",
+      "login_with_browser" : "เข้าสู่ระบบด้วยเบราว์เซอร์",
+      "remember_to_login_with" : "อย่าลืมเข้าสู่ระบบด้วย:",
+      "send_me_the_link" : "ส่งลิงค์มาให้ฉัน",
+      "sub_head" : "บัญชีของคุณใช้งานได้แล้ว!"
+    },
+    "remember_pwd_msg" : "จำรหัสผ่านของคุณ! คุณจะต้องใช้มันเพื่อเข้าสู่ระบบ",
+    "reset_password" : {
+      "enter_code" : "ใส่รหัส",
+      "field_label" : {
+        "secret_code" : "รหัสลับ"
+      },
+      "header" : "ส่งคำแนะนำการรีเซ็ตรหัสผ่านสำหรับบัญชีนี้หรือไม่",
+      "invalid_code" : "รหัสไม่ถูกต้อง",
+      "message" : "ตรวจสอบอีเมลของคุณเพื่อดูรหัสรีเซ็ต",
+      "resend_code" : "ส่งรหัสอีกครั้ง",
+      "set_new_password" : "ตั้งรหัสผ่านใหม่",
+      "success_msg" : "เปลี่ยนรหัสผ่านแล้ว เข้าสู่ระบบด้วยรหัสผ่านใหม่"
+    },
+    "reset_password_msg" : "รีเซ็ตและส่งรหัสผ่านชั่วคราวสำหรับบัญชีนี้หรือไม่",
+    "reset_pwd_link_sent_msg" : "ส่งลิงค์แล้ว. ตรวจสอบอีเมลของคุณ. (รวมถึงโฟลเดอร์สแปม)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "กรอกหมายเลขโทรศัพท์มือถือ",
+      "header" : "ดาวน์โหลดแอพมือถือ",
+      "select_device" : "เลือกอุปกรณ์",
+      "send_me_the_app" : "ส่งแอพมาให้ฉัน",
+      "sub_head" : "คุณจะได้รับข้อความครั้งเดียวพร้อมลิงก์สำหรับดาวน์โหลดแอป"
+    },
+    "set_up_new" : {
+      "header_msg" : "ตั้งค่าใหม่ได้ในไม่กี่ขั้นตอน!"
+    },
+    "update_pwd" : {
+      "header_msg" : "เราได้อัปเดตระบบของเราแล้ว!",
+      "improve_exp_msg" : "เพื่อปรับปรุงประสบการณ์การเข้าสู่ระบบของคุณ ตอนนี้คุณสามารถใช้รหัสผ่านเดียวสำหรับบัญชีของคุณทั้งหมด",
+      "multi_acct_msg" : "คุณมีมากกว่าหนึ่งบัญชีที่ใช้อีเมลนี้"
+    },
+    "verify_phone" : {
+      "header_msg" : "ยืนยันโทรศัพท์",
+      "receive_code_msg" : "ไม่ได้รับรหัส?",
+      "sub_header_msg" : "รหัสถูกส่งไปที่"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "ไม่มีผู้ใช้สำหรับอีเมลนี้ ตรวจสอบให้แน่ใจว่าคุณมีบัญชีและความท้าทายที่ใช้งานอยู่ในแอป WEDO Transformations โปรดลองอีเมลอื่นหรือติดต่อผู้สนับสนุนของคุณเพื่อขอความช่วยเหลือ"
+    },
+    "welcome" : {
+      "header_msg" : "ยินดีต้อนรับสู่",
+      "sub_header_msg" : "จัดการความสัมพันธ์ได้อย่างราบรื่นและขยายธุรกิจของคุณ"
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "ชื่อการดำเนินการ",
+      "notice" : {
+        "action_name_blank_msg" : "ป้อนชื่อการดำเนินการ",
+        "action_needed_msg" : "การดำเนินการที่จำเป็นในการเปลี่ยนแปลง"
+      },
+      "title" : "เพิ่มการกระทำใหม่"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "ชื่อล่าช้า",
+      "delay_time" : "เวลาล่าช้า",
+      "delay_time_unit" : "หน่วยเวลาหน่วงเวลา",
+      "notice" : {
+        "delay_name_blank_msg" : "ป้อนชื่อความล่าช้า",
+        "delay_unit_blank_msg" : "ป้อนหน่วยเวลาล่าช้า",
+        "time_blank_msg" : "ป้อนเวลาล่าช้า"
+      },
+      "title" : "เพิ่มความล่าช้าใหม่"
+    },
+    "add_response_modal" : {
+      "response_name" : "ชื่อการตอบกลับ",
+      "title" : "เพิ่มการตอบกลับใหม่"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "ป้อนชื่อเวที"
+      },
+      "stage_name" : "ชื่อเวที",
+      "title" : "เพิ่มเวทีใหม่"
+    },
+    "button" : {
+      "add_action" : "เพิ่มการดำเนินการ",
+      "add_delay" : "เพิ่มความล่าช้า",
+      "add_new" : "เพิ่มใหม่",
+      "add_response" : "เพิ่มการตอบกลับ",
+      "add_stage" : "เพิ่มสเตจ",
+      "new_smartconnector" : "ตัวเชื่อมต่ออัจฉริยะใหม่"
+    },
+    "delete_confirmation_msg" : "คุณแน่ใจหรือไม่ว่าต้องการลบ SmartConnector นี้",
+    "label" : {
+      "edit_action" : "แก้ไขการดำเนินการ",
+      "edit_stage" : "แก้ไขเวที"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "การดำเนินการที่จำเป็นในการเปลี่ยนผู้ติดต่อในแต่ละขั้นตอน",
+      "no_stages_msg" : "ไม่พบขั้นตอนสำหรับ SmartConnector นี้"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "จำนวนผู้ติดต่อที่ใช้งานและไม่ใช้งานในแต่ละขั้นตอน",
+      "avg_transition_graph" : "เวลาการเปลี่ยนแปลงเฉลี่ยสำหรับผู้ติดต่อในแต่ละขั้นตอน",
+      "contact_conversion_graph_title" : "ติดต่อการแปลงจากระยะแรก",
+      "contacts_transition_percent" : "รายชื่อติดต่อถูกเปลี่ยน {{percentage}}%",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "จำนวนผู้ติดต่อ"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "ขั้นตอน"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "ระดับบัญชี",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "อัปโหลดจากแกลเลอรี",
+        "new_photo" : "รูปภาพใหม่จากกล้อง"
+      }
+    },
+    "links" : {
+      "meeting_link" : "ลิงค์ประชุม",
+      "my_website" : "เว็บไซต์ของฉัน"
+    },
+    "my_info" : {
+      "custom_fields" : "ฟิลด์ที่กำหนดเอง"
+    },
+    "settings" : {
+      "app_language" : "ภาษาของแอป",
+      "delete_account" : "ลบบัญชี",
+      "group_code" : "รหัสกลุ่ม",
+      "group_codes" : {
+        "add_a_group_code" : "เพิ่มรหัสกลุ่ม",
+        "delete_group_code_msg" : "คุณแน่ใจหรือไม่ว่าต้องการลบรหัสกลุ่ม",
+        "existing_group_msg" : "คุณอยู่ในกลุ่มนี้แล้ว"
+      },
+      "notification_settings" : "การตั้งค่าการแจ้งเตือน",
+      "reset_defaults" : "รีเซ็ตค่าเริ่มต้น",
+      "security" : "ความปลอดภัย",
+      "time_zone" : "เขตเวลา",
+      "training_partner" : "พันธมิตรการฝึกอบรม",
+      "user_alias" : "นามแฝงของผู้ใช้",
+      "user_alias_tooltip" : "นามแฝงนี้จะใช้เพื่อปรับแต่งลิงก์ที่คุณส่งไปยังผู้ติดต่อของคุณ"
+    },
+    "tabs" : {
+      "links" : "ลิงค์",
+      "my_info" : "ข้อมูลของฉัน",
+      "settings" : "การตั้งค่า"
+    }
+  }
+}
