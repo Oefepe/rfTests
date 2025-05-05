@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "支払い方法の追加",
+      "credit_or_debit" : "クレジットカードまたはデビットカード",
+      "delete_account" : "アカウントを削除する",
+      "pay_and_upgrade" : "支払いとアップグレード"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "本気ですか？",
+      "main_message" : "毎月のサブスクリプションは、請求期間の終了まで支払われます。期間終了時にサブスクリプションのキャンセルを続行したい場合は、下の「はい、続行」をクリックして次の画面に進んでください。\n\nサブスクリプションをキャンセルすると、次のようなアカウントへのすべてのアクセスが失われます。",
+      "subscription_cancelled_message" : "サブスクリプションはキャンセルされました。"
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "行ってしまうのは残念です！",
+      "main_message" : "あなたのフィードバックは貴重です。キャンセルした理由やその他のご意見をぜひお聞かせください。",
+      "notice_alert" : "サブスクリプションはキャンセルされました。2023 年 4 月 30 日以降はアクティブではなくなります。"
+    },
+    "field_label" : {
+      "card_number" : "カード番号",
+      "coupon" : "クーポン",
+      "cvv_code" : "CVVコード",
+      "expiration_date" : "有効期限 (mm/yyyy)",
+      "month" : "月",
+      "name_on_card" : "カード上の名前",
+      "year" : "年"
+    },
+    "offer_badge" : {
+      "best" : "最高",
+      "deal" : "取引"
+    },
+    "payment_method" : {
+      "credit_card" : "クレジットカード",
+      "paypal" : "ペイパル"
+    },
+    "plans_pricing" : {
+      "headline" : "スタンダードのすべてに加えて..."
+    },
+    "remove_payment_modal" : {
+      "message" : "この支払い方法を削除してもよろしいですか?"
+    },
+    "remove_payment_model" : {
+      "headline" : "支払い方法の削除"
+    },
+    "text" : {
+      "agree_to_term_msg" : "「支払ってアップグレード」をクリックすると、以下のポリシーに同意したことになります。",
+      "authorize_cc_msg" : "私は、RapidFunnel Inc. が私のアカウントにこの金額を請求することを承認します。",
+      "cancel_subscription" : "購読をキャンセルする",
+      "current_payment_method" : "現在の支払い方法",
+      "month" : "月",
+      "monthly" : "毎月",
+      "next_billing_amount" : "次回請求額",
+      "next_billing_date" : "次回の請求日",
+      "payment" : "支払い",
+      "payment_history" : "支払歴",
+      "payment_method" : "支払方法",
+      "paypal_msg" : "「PayPal」で支払うことを選択すると、このページの外に移動し、追加のプライバシー ポリシーと利用規約が適用されます。",
+      "review" : "レビュー",
+      "subscription" : "サブスクリプション",
+      "switch_to_yearly" : "毎年に切り替える",
+      "todays_total" : "今日の合計",
+      "year" : "年",
+      "yearly" : "毎年",
+      "yearly_benefit_msg" : "年払いで2ヶ月無料！"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "適用する",
+      "back" : "戻る",
+      "cancel" : "キャンセル",
+      "contact_support" : "サポート問い合わせ先",
+      "continue" : "続く",
+      "delete" : "消去",
+      "log_out" : "ログアウト",
+      "manage" : "管理",
+      "more" : "もっと",
+      "next" : "次",
+      "privacy_policy" : "プライバシー ポリシー",
+      "publish" : "公開",
+      "save" : "保存",
+      "skip" : "スキップ",
+      "submit" : "提出する",
+      "terms_and_conditions" : "利用規約",
+      "unpublish" : "非公開にする",
+      "upgrade" : "アップグレード"
+    },
+    "feature_name" : {
+      "coaching" : "コーチング",
+      "events" : "イベント",
+      "home" : "家"
+    },
+    "field_label" : {
+      "address" : "住所",
+      "address1" : "住所1",
+      "address2" : "住所2",
+      "city" : "市",
+      "company_name" : "会社名",
+      "confirm_new_password" : "新しいパスワードを確認",
+      "confirm_password" : "パスワードを認証する",
+      "country" : "国",
+      "email" : "Eメール",
+      "first_name" : "ファーストネーム",
+      "group_code" : "グループコード",
+      "last_name" : "苗字",
+      "new_password" : "新しいパスワード",
+      "password" : "パスワード",
+      "phone" : "電話",
+      "platform" : "プラットフォーム",
+      "social" : "社交",
+      "state_province" : "州または県",
+      "title_person" : "タイトル",
+      "zip_postal_code" : "郵便番号"
+    },
+    "notice" : {
+      "default_error_msg" : "何か問題が発生しました。もう一度試してください。",
+      "enter" : "入力",
+      "error_code" : "エラーコード",
+      "incorrect_password" : "パスワードが間違っています",
+      "information" : "情報",
+      "invalid" : "無効",
+      "invalid_country_code" : "国コードが無効です",
+      "invalid_email_msg" : "電子メールが無効です。形式を確認するか、別のメールアドレスを使用してください。",
+      "invalid_phone_msg" : "無効な電話番号。数字と ( ) のみが許可されます。",
+      "invalid_phone_number" : "電話番号が無効です",
+      "loading" : "読み込み中",
+      "no_contacts_to_display" : "表示する連絡先がありません",
+      "no_data_available" : "データなし",
+      "page_not_found" : "このページはサーバー上で見つかりません。",
+      "password_do_not_match" : "入力されたパスワードは、\nマッチ。",
+      "password_minimum" : "パスワードは少なくとも次の値にする必要があります\n6文字",
+      "required" : "タイトルは必須です",
+      "servers_unavailable" : "サーバーに接続できません。接続を確認してください。問題が解決しない場合は、サポートにお問い合わせください。",
+      "success" : "成功",
+      "unknown_email" : "一部のメールは確認が難しいです！念のためもう一度確認してください。",
+      "warning" : "警告"
+    },
+    "text" : {
+      "and" : "そして",
+      "ok" : "わかりました",
+      "published" : "発行済み",
+      "thanks" : "ありがとう",
+      "yes" : "はい"
+    },
+    "title" : {
+      "select_language" : "アプリ言語の選択"
+    },
+    "user_level" : {
+      "pro" : "プロ",
+      "standard" : "標準"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "パーソナライゼーションと通知",
+      "sub_header_msg" : "この情報は設定でいつでも更新できます。"
+    },
+    "biometrics" : {
+      "header_msg" : "生体認証を使用してログインする",
+      "sub-header_msg" : "指紋センサーをタッチする"
+    },
+    "button" : {
+      "back_to_login" : "ログイン画面に戻る",
+      "create_account" : "新しいアカウントを作成する",
+      "fingerprint" : "指紋",
+      "forgot_password" : "パスワードをお忘れですか？",
+      "get_started" : "始めましょう",
+      "log_in" : "ログイン",
+      "request_again" : "再度リクエストしてください",
+      "set_password" : "パスワードを設定してください",
+      "verify" : "確認する"
+    },
+    "choose_account" : "アカウントの選択",
+    "create_account" : "アカウントを作成する",
+    "create_password" : "パスワードの作成",
+    "create_pwd" : {
+      "header_msg" : "はじめまして",
+      "sub_header_msg" : "これは RapidFunnel ユーザー名です"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "サインインができませんか。",
+      "login_msg" : "メールアドレスとパスワードを使用してログインします。",
+      "need_new_acct_msg" : "新しいアカウントを作成する必要がありますか?ここをクリック",
+      "welcome_back" : "おかえり"
+    },
+    "enter_email" : {
+      "header_msg" : "メールアドレスを入力してください。ログインに使用します。"
+    },
+    "enter_password" : "パスワードを入力する",
+    "field_label" : {
+      "username_field" : "メールアドレスまたは電話番号"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "アカウントにユーザーを作成します:",
+      "header_msg" : "既存のユーザーが見つかりました:",
+      "welcome_back" : "おかえり"
+    },
+    "group_code" : {
+      "header_msg" : "あなたの会社のすべてのコンテンツを入手してください。グループコードを入力してください。",
+      "header_msg_desktop" : "会社のすべてのコンテンツを取得します。グループ コードを入力します。",
+      "sub_header_msg" : "グループコードがわからないですか？\nリーダーに尋ねるか、"
+    },
+    "info_review" : {
+      "enable_finger_print" : "指紋認証/Touch ID を有効にする",
+      "header_msg" : "情報レビュー",
+      "i_agree_to_the" : "私は同意します",
+      "i_agree_to_the_privacy" : "<a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">プライバシー ポリシー</a>に同意します",
+      "i_agree_to_the_terms" : "に同意します"
+    },
+    "last_successful_login" : "最後に成功したログイン",
+    "login" : "ログイン",
+    "login_remember_pwd" : "パスワードを覚える",
+    "no_account_found" : {
+      "header_msg" : "その情報を持つアカウントは見つかりませんでした。"
+    },
+    "notice" : {
+      "existing_user_in_account" : "このメールアドレスを持つユーザーは既にこのアカウントに存在します",
+      "general_user_create_error" : "アカウントの作成中に不明なエラーが発生しました。サポートにお問い合わせください。",
+      "incorrect_email_pwd_msg" : "メールアドレスまたはパスワードが間違っています。もう一度お試しください。",
+      "invalid_group" : "無効なグループコード",
+      "no_matching_email" : "そのメールを使用したユーザーは見つかりませんでした。別のメールアドレスを試すか、サポートにお問い合わせください。",
+      "restricted_group_code" : "このグループコードはサインアップ時に使用できません",
+      "user_already_exists" : "このユーザーは既に存在します。ログインするか、別のメールアドレスを使用してください。"
+    },
+    "or_divider" : "または",
+    "personalize_app" : {
+      "header_msg" : "アプリをパーソナライズします。\nあなたの名前は何ですか？"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "おめでとうございます！\nアカウントの準備ができました！",
+      "for_best_experience_msg" : "最高の体験を得るには、モバイル アプリをご利用ください。",
+      "get_the_mobile_app" : "モバイルアプリを入手",
+      "header" : "おめでとう！",
+      "login_with_browser" : "ブラウザでログイン",
+      "remember_to_login_with" : "忘れずにログインしてください:",
+      "send_me_the_link" : "リンクを送ってください",
+      "sub_head" : "あなたのアカウントはアクティブです!"
+    },
+    "remember_pwd_msg" : "パスワードを忘れないようにしてください。ログインするために必要になります。",
+    "reset_password" : {
+      "enter_code" : "コードを入力する",
+      "field_label" : {
+        "secret_code" : "シークレットコード"
+      },
+      "header" : "このアカウントのパスワードリセット手順を送信しますか?",
+      "invalid_code" : "無効なコード",
+      "message" : "リセットコードについてはメールで確認してください。",
+      "resend_code" : "コードを再送信",
+      "set_new_password" : "新しいパスワードを設定する",
+      "success_msg" : "パスワード変更済み。新しいパスワードでログインします。"
+    },
+    "reset_password_msg" : "このアカウントの一時パスワードをリセットして送信しますか?",
+    "reset_pwd_link_sent_msg" : "リンクを送信しました。メールを確認してください。(スパムフォルダも含む)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "携帯電話番号を入力してください",
+      "header" : "モバイルアプリをダウンロード",
+      "select_device" : "デバイスを選択",
+      "send_me_the_app" : "アプリを送ってください",
+      "sub_head" : "アプリをダウンロードするためのリンクが記載されたテキストメッセージが 1 回だけ送信されます。"
+    },
+    "set_up_new" : {
+      "header_msg" : "わずか数ステップで新しいものをセットアップできます。"
+    },
+    "update_pwd" : {
+      "header_msg" : "システムをアップデートしました！",
+      "improve_exp_msg" : "ログイン エクスペリエンスを向上させるために、すべてのアカウントに 1 つのパスワードを使用できるようになりました。",
+      "multi_acct_msg" : "このメールを使用しているアカウントは複数あります"
+    },
+    "verify_phone" : {
+      "header_msg" : "電話番号を確認する",
+      "receive_code_msg" : "コードを受け取っていませんか?",
+      "sub_header_msg" : "コードの送信先は"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "このメールにはユーザーが存在しません。 WEDO Transformations アプリにアカウントとアクティブなチャレンジがあることを確認してください。別の電子メールを試すか、スポンサーに連絡してサポートを求めてください。"
+    },
+    "welcome" : {
+      "header_msg" : "へようこそ",
+      "sub_header_msg" : "人間関係をシームレスに管理し、ビジネスを成長させます。"
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "アクション名",
+      "notice" : {
+        "action_name_blank_msg" : "アクション名を入力してください",
+        "action_needed_msg" : "移行するにはアクションが必要です"
+      },
+      "title" : "新しいアクションの追加"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "遅延名",
+      "delay_time" : "遅延時間",
+      "delay_time_unit" : "遅延時間単位",
+      "notice" : {
+        "delay_name_blank_msg" : "遅延名を入力してください",
+        "delay_unit_blank_msg" : "遅延時間の単位を入力してください",
+        "time_blank_msg" : "遅延時間を入力してください"
+      },
+      "title" : "新しい遅延を追加"
+    },
+    "add_response_modal" : {
+      "response_name" : "応答名",
+      "title" : "新しい応答を追加"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "ステージ名を入力してください"
+      },
+      "stage_name" : "芸名",
+      "title" : "新しいステージを追加"
+    },
+    "button" : {
+      "add_action" : "アクションの追加",
+      "add_delay" : "遅延の追加",
+      "add_new" : "新しく追加する",
+      "add_response" : "応答を追加",
+      "add_stage" : "ステージの追加",
+      "new_smartconnector" : "新しいスマートコネクタ"
+    },
+    "delete_confirmation_msg" : "この SmartConnector を削除してもよろしいですか?",
+    "label" : {
+      "edit_action" : "アクションの編集",
+      "edit_stage" : "編集ステージ"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "各段階で連絡先を移行するために必要なアクション",
+      "no_stages_msg" : "この SmartConnector のステージが見つかりません"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "各ステージのアクティブな連絡先と非アクティブな連絡先の数",
+      "avg_transition_graph" : "各ステージの接点の平均遷移時間",
+      "contact_conversion_graph_title" : "第一段階からの連絡先変換",
+      "contacts_transition_percent" : "連絡先が {{percentage}}% 移行しました",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "コンタクト数"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "ステージ"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "アカウントレベル",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "ギャラリーからアップロード",
+        "new_photo" : "カメラからの新しい写真"
+      }
+    },
+    "links" : {
+      "meeting_link" : "ミーティングリンク",
+      "my_website" : "私のウェブサイト"
+    },
+    "my_info" : {
+      "custom_fields" : "カスタムフィールド"
+    },
+    "settings" : {
+      "app_language" : "アプリの言語",
+      "delete_account" : "アカウントを削除する",
+      "group_code" : "グループコード",
+      "group_codes" : {
+        "add_a_group_code" : "グループコードを追加する",
+        "delete_group_code_msg" : "グループコードを削除してもよろしいですか?",
+        "existing_group_msg" : "あなたはすでにこのグループに属しています。"
+      },
+      "notification_settings" : "通知設定",
+      "reset_defaults" : "デフォルトにリセット",
+      "security" : "安全",
+      "time_zone" : "タイムゾーン",
+      "training_partner" : "トレーニングパートナー",
+      "user_alias" : "ユーザーエイリアス",
+      "user_alias_tooltip" : "このエイリアスは、連絡先に送信するリンクをパーソナライズするために使用されます。"
+    },
+    "tabs" : {
+      "links" : "リンク",
+      "my_info" : "私の情報",
+      "settings" : "設定"
+    }
+  }
+}

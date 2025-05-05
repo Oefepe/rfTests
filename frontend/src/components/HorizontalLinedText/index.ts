@@ -1,0 +1,1 @@
+export { HorizontalLinedText } from './HorizontalLinedText';

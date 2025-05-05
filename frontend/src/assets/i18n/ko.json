@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "결제 수단 추가",
+      "credit_or_debit" : "신용카드 또는 직불카드",
+      "delete_account" : "계정 삭제",
+      "pay_and_upgrade" : "결제 및 업그레이드"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "확실합니까?",
+      "main_message" : "월간 구독료는 청구 기간이 끝날 때까지 지불됩니다. 기간 종료 후 구독 취소를 진행하려면 아래의 \"예, 계속\"을 클릭하여 다음 화면으로 이동하세요.\n\n구독을 취소하면 다음을 포함하여 계정에 대한 모든 액세스 권한을 잃게 됩니다.",
+      "subscription_cancelled_message" : "구독이 취소되었습니다."
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "안타깝다\n너가!",
+      "main_message" : "귀하의 의견은 소중합니다! 잠시 시간을 내어 취소 이유와 기타 의견을 알려 주시기 바랍니다.",
+      "notice_alert" : "구독이 취소되었습니다. 2023년 4월 30일 이후에는 더 이상 활성화되지 않습니다."
+    },
+    "field_label" : {
+      "card_number" : "카드 번호",
+      "coupon" : "쿠폰",
+      "cvv_code" : "CVV 코드",
+      "expiration_date" : "만료일(mm/yyyy)",
+      "month" : "월",
+      "name_on_card" : "카드 이름",
+      "year" : "년도"
+    },
+    "offer_badge" : {
+      "best" : "최상의",
+      "deal" : "거래"
+    },
+    "payment_method" : {
+      "credit_card" : "신용 카드",
+      "paypal" : "페이팔"
+    },
+    "plans_pricing" : {
+      "headline" : "스탠다드 플러스의 모든 것..."
+    },
+    "remove_payment_modal" : {
+      "message" : "이 결제 수단을 삭제하시겠습니까?"
+    },
+    "remove_payment_model" : {
+      "headline" : "결제 수단 삭제"
+    },
+    "text" : {
+      "agree_to_term_msg" : "결제 및 업그레이드를 클릭하면 아래 정책에 동의하는 것으로 간주됩니다.",
+      "authorize_cc_msg" : "나는 RapidFunnel Inc.가 이 금액을 내 계정에 청구하도록 승인합니다.",
+      "cancel_subscription" : "구독 취소",
+      "current_payment_method" : "현재 결제 방법",
+      "month" : "월",
+      "monthly" : "월간 간행물",
+      "next_billing_amount" : "다음 청구 금액",
+      "next_billing_date" : "다음 청구 날짜",
+      "payment" : "지불",
+      "payment_history" : "결제 내역",
+      "payment_method" : "결제수단",
+      "paypal_msg" : "\"PayPal\"로 결제하기로 선택하면 이 페이지 외부로 이동하게 되며 여기에는 추가 개인 정보 보호 정책 및 이용 약관이 적용됩니다.",
+      "review" : "검토",
+      "subscription" : "신청",
+      "switch_to_yearly" : "연간으로 전환",
+      "todays_total" : "오늘의 합계",
+      "year" : "년도",
+      "yearly" : "매년",
+      "yearly_benefit_msg" : "연간 결제 시 2개월 무료!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "적용하다",
+      "back" : "뒤쪽에",
+      "cancel" : "취소",
+      "contact_support" : "연락처 지원",
+      "continue" : "계속하다",
+      "delete" : "삭제",
+      "log_out" : "로그 아웃",
+      "manage" : "관리하다",
+      "more" : "더",
+      "next" : "다음",
+      "privacy_policy" : "개인정보 보호정책",
+      "publish" : "게시",
+      "save" : "구하다",
+      "skip" : "건너뛰다",
+      "submit" : "제출하다",
+      "terms_and_conditions" : "이용약관",
+      "unpublish" : "게시 취소",
+      "upgrade" : "업그레이드"
+    },
+    "feature_name" : {
+      "coaching" : "코칭",
+      "events" : "이벤트",
+      "home" : "집"
+    },
+    "field_label" : {
+      "address" : "주소",
+      "address1" : "주소 라인 1",
+      "address2" : "주소 2",
+      "city" : "도시",
+      "company_name" : "회사 이름",
+      "confirm_new_password" : "새 암호를 확인합니다",
+      "confirm_password" : "비밀번호 확인",
+      "country" : "국가",
+      "email" : "이메일",
+      "first_name" : "이름",
+      "group_code" : "그룹 코드",
+      "last_name" : "성",
+      "new_password" : "새 비밀번호",
+      "password" : "비밀번호",
+      "phone" : "핸드폰",
+      "platform" : "플랫폼",
+      "social" : "사회의",
+      "state_province" : "국가 또는 지방",
+      "title_person" : "제목",
+      "zip_postal_code" : "우편번호"
+    },
+    "notice" : {
+      "default_error_msg" : "문제가 발생했습니다. 다시 시도해 주세요.",
+      "enter" : "입력하다",
+      "error_code" : "오류 코드",
+      "incorrect_password" : "잘못된 비밀번호",
+      "information" : "정보",
+      "invalid" : "유효하지 않은",
+      "invalid_country_code" : "잘못된 국가 코드",
+      "invalid_email_msg" : "이메일이 유효하지 않습니다. 형식을 확인하거나 다른 이메일을 사용해 주세요.",
+      "invalid_phone_msg" : "유효하지 않은 전화 번호. 숫자와 ( )만 허용됩니다.",
+      "invalid_phone_number" : "잘못된 전화번호입니다",
+      "loading" : "로드 중",
+      "no_contacts_to_display" : "표시할 연락처가 없습니다.",
+      "no_data_available" : "자료 없음",
+      "page_not_found" : "서버에서 이 페이지를 찾을 수 없습니다.",
+      "password_do_not_match" : "입력한 비밀번호는 비밀번호가 아닙니다.\n성냥.",
+      "password_minimum" : "비밀번호는 최소 이상이어야 합니다.\n6자",
+      "required" : "제목은 필수 항목입니다.",
+      "servers_unavailable" : "서버에 연결할 수 없습니다. 연결을 확인하세요. 문제가 지속되면 지원팀에 문의하세요.",
+      "success" : "성공",
+      "unknown_email" : "일부 이메일은 확인이 어렵습니다! 만일의 경우를 대비하여 다시 확인하세요.",
+      "warning" : "경고"
+    },
+    "text" : {
+      "and" : "그리고",
+      "ok" : "좋아요",
+      "published" : "게시됨",
+      "thanks" : "감사해요",
+      "yes" : "예"
+    },
+    "title" : {
+      "select_language" : "앱 언어 선택"
+    },
+    "user_level" : {
+      "pro" : "찬성",
+      "standard" : "기준"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "개인화 및 알림",
+      "sub_header_msg" : "설정에서 언제든지 이 정보를 업데이트할 수 있습니다."
+    },
+    "biometrics" : {
+      "header_msg" : "생체 인식으로 로그인",
+      "sub-header_msg" : "지문 센서를 터치하세요."
+    },
+    "button" : {
+      "back_to_login" : "로그인 화면으로 돌아가기",
+      "create_account" : "새 계정을 만들",
+      "fingerprint" : "지문",
+      "forgot_password" : "비밀번호를 잊으 셨나요?",
+      "get_started" : "시작하다",
+      "log_in" : "로그인",
+      "request_again" : "다시 요청",
+      "set_password" : "암호를 설정하세요",
+      "verify" : "확인하다"
+    },
+    "choose_account" : "계정 선택",
+    "create_account" : "계정 만들기",
+    "create_password" : "비밀번호 생성",
+    "create_pwd" : {
+      "header_msg" : "만나서 반가워요",
+      "sub_header_msg" : "이것은 귀하의 RapidFunnel 사용자 이름입니다"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "로그인하는 데 문제가 있나요?",
+      "login_msg" : "이메일 주소와 비밀번호를 사용하여 로그인하세요.",
+      "need_new_acct_msg" : "새 계정을 만들어야 합니까? 여기를 클릭하세요",
+      "welcome_back" : "돌아온 것을 환영합니다"
+    },
+    "enter_email" : {
+      "header_msg" : "이메일을 입력하시면 로그인에 사용됩니다."
+    },
+    "enter_password" : "암호를 입력",
+    "field_label" : {
+      "username_field" : "이메일 또는 전화번호"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "계정에 사용자 생성:",
+      "header_msg" : "다음에 대한 기존 사용자를 찾았습니다.",
+      "welcome_back" : "돌아온 것을 환영합니다"
+    },
+    "group_code" : {
+      "header_msg" : "귀하의 회사에 대한 모든 콘텐츠를 얻으십시오. 그룹 코드를 입력하세요.",
+      "header_msg_desktop" : "귀하의 회사에 대한 모든 콘텐츠를 얻으십시오. 그룹 코드를 입력하세요.",
+      "sub_header_msg" : "그룹 코드를 모르시나요?\n리더에게 물어보거나"
+    },
+    "info_review" : {
+      "enable_finger_print" : "지문/터치 ID 활성화",
+      "header_msg" : "정보 검토",
+      "i_agree_to_the" : "나는 동의 함",
+      "i_agree_to_the_privacy" : "<a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">개인정보 보호정책</a>에 동의합니다.",
+      "i_agree_to_the_terms" : "나는 동의 함"
+    },
+    "last_successful_login" : "마지막으로 성공한 로그인",
+    "login" : "로그인",
+    "login_remember_pwd" : "비밀번호 기억하기",
+    "no_account_found" : {
+      "header_msg" : "해당 정보가 포함된 계정을 찾을 수 없습니다."
+    },
+    "notice" : {
+      "existing_user_in_account" : "이 이메일을 가진 사용자가 이 계정에 이미 존재합니다.",
+      "general_user_create_error" : "계정을 생성하는 중에 알 수 없는 오류가 발생했습니다. 연락처 지원.",
+      "incorrect_email_pwd_msg" : "이메일이나 비밀번호가 정확하지 않습니다. 다시 시도해 주세요.",
+      "invalid_group" : "잘못된 그룹 코드",
+      "no_matching_email" : "해당 이메일에는 사용자가 없습니다. 다른 이메일 주소를 시도하거나 지원팀에 문의하세요.",
+      "restricted_group_code" : "이 그룹 코드는 가입 시 사용할 수 없습니다.",
+      "user_already_exists" : "사용자가 이미 존재합니다. 로그인하거나 다른 이메일을 사용하세요."
+    },
+    "or_divider" : "또는",
+    "personalize_app" : {
+      "header_msg" : "앱을 개인화하세요.\n이름이 뭐에요?"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "축하해요!\n귀하의 계정이 준비되었습니다!",
+      "for_best_experience_msg" : "최고의 경험을 위해 모바일 앱을 사용하세요.",
+      "get_the_mobile_app" : "모바일 앱 받기",
+      "header" : "축하해요!",
+      "login_with_browser" : "브라우저로 로그인",
+      "remember_to_login_with" : "다음을 사용하여 로그인하세요.",
+      "send_me_the_link" : "나에게 링크를 보내",
+      "sub_head" : "귀하의 계정이 활성화되었습니다!"
+    },
+    "remember_pwd_msg" : "비밀번호를 기억하세요! 로그인하려면 필요합니다.",
+    "reset_password" : {
+      "enter_code" : "코드를 입력",
+      "field_label" : {
+        "secret_code" : "비밀 코드"
+      },
+      "header" : "이 계정에 대한 비밀번호 재설정 지침을 보내시겠습니까?",
+      "invalid_code" : "유효하지 않은 코드",
+      "message" : "이메일에서 재설정 코드를 확인하세요.",
+      "resend_code" : "코드 재전송",
+      "set_new_password" : "새 비밀번호 설정",
+      "success_msg" : "비밀번호가 변경되었습니다. 새로운 비밀번호로 로그인하세요."
+    },
+    "reset_password_msg" : "이 계정의 임시 비밀번호를 재설정하고 보내시겠습니까?",
+    "reset_pwd_link_sent_msg" : "링크가 전송되었습니다. 이메일을 확인. (SPAM 폴더 포함)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "휴대폰 번호를 입력하세요",
+      "header" : "모바일 앱 다운로드",
+      "select_device" : "장치 선택",
+      "send_me_the_app" : "나에게 앱을 보내주세요",
+      "sub_head" : "앱 다운로드 링크가 포함된 일회성 문자 메시지를 받게 됩니다."
+    },
+    "set_up_new" : {
+      "header_msg" : "몇 단계만 거치면 새로운 것을 설정할 수 있습니다!"
+    },
+    "update_pwd" : {
+      "header_msg" : "시스템을 업데이트했습니다!",
+      "improve_exp_msg" : "로그인 경험을 향상시키기 위해 이제 모든 계정에 하나의 비밀번호를 사용할 수 있습니다.",
+      "multi_acct_msg" : "이 이메일을 사용하는 계정이 두 개 이상 있습니다."
+    },
+    "verify_phone" : {
+      "header_msg" : "전화번호 확인",
+      "receive_code_msg" : "코드를 받지 못하셨나요?",
+      "sub_header_msg" : "코드가 다음으로 전송됩니다."
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "이 이메일에 대한 사용자가 존재하지 않습니다. WEDO Transformations 앱에 계정과 활성 챌린지가 있는지 확인하세요. 대체 이메일을 사용해 보거나 스폰서에게 도움을 요청하세요."
+    },
+    "welcome" : {
+      "header_msg" : "에 오신 것을 환영합니다",
+      "sub_header_msg" : "관계를 원활하게 관리하고 비즈니스를 성장시키세요."
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "작업 이름",
+      "notice" : {
+        "action_name_blank_msg" : "작업 이름을 입력하세요.",
+        "action_needed_msg" : "전환에 필요한 조치"
+      },
+      "title" : "새 작업 추가"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "지연 이름",
+      "delay_time" : "지연 시간",
+      "delay_time_unit" : "지연 시간 단위",
+      "notice" : {
+        "delay_name_blank_msg" : "지연 이름을 입력하세요.",
+        "delay_unit_blank_msg" : "지연 시간 단위를 입력하세요.",
+        "time_blank_msg" : "지연시간을 입력하세요"
+      },
+      "title" : "새로운 지연 추가"
+    },
+    "add_response_modal" : {
+      "response_name" : "응답 이름",
+      "title" : "새 응답 추가"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "무대 이름을 입력하세요"
+      },
+      "stage_name" : "예명",
+      "title" : "새 스테이지 추가"
+    },
+    "button" : {
+      "add_action" : "액션 추가",
+      "add_delay" : "지연 추가",
+      "add_new" : "새로운 걸 더하다",
+      "add_response" : "응답 추가",
+      "add_stage" : "스테이지 추가",
+      "new_smartconnector" : "새로운 스마트커넥터"
+    },
+    "delete_confirmation_msg" : "이 SmartConnector를 삭제하시겠습니까?",
+    "label" : {
+      "edit_action" : "작업 편집",
+      "edit_stage" : "스테이지 편집"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "각 단계에서 연락처를 전환하는 데 필요한 조치",
+      "no_stages_msg" : "이 SmartConnector에 대한 단계를 찾을 수 없습니다."
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "각 단계의 활성 및 비활성 연락처 수",
+      "avg_transition_graph" : "각 단계의 컨택 평균 전환 시간",
+      "contact_conversion_graph_title" : "첫 번째 단계에서 연락처 변환",
+      "contacts_transition_percent" : "연락처가 {{percentage}}% 전환되었습니다.",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "연락처 수"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "스테이지"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "계정 수준",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "갤러리에서 업로드",
+        "new_photo" : "카메라의 새 사진"
+      }
+    },
+    "links" : {
+      "meeting_link" : "회의 링크",
+      "my_website" : "나의 웹 사이트"
+    },
+    "my_info" : {
+      "custom_fields" : "사용자 정의 필드"
+    },
+    "settings" : {
+      "app_language" : "앱 언어",
+      "delete_account" : "계정 삭제",
+      "group_code" : "그룹 코드",
+      "group_codes" : {
+        "add_a_group_code" : "그룹 코드 추가",
+        "delete_group_code_msg" : "그룹 코드를 삭제하시겠습니까?",
+        "existing_group_msg" : "귀하는 이미 이 그룹에 속해 있습니다."
+      },
+      "notification_settings" : "알림 설정",
+      "reset_defaults" : "기본값 재설정",
+      "security" : "보안",
+      "time_zone" : "시간대",
+      "training_partner" : "교육 파트너",
+      "user_alias" : "사용자 별칭",
+      "user_alias_tooltip" : "이 별칭은 연락처에 보내는 링크를 개인화하는 데 사용됩니다."
+    },
+    "tabs" : {
+      "links" : "연결",
+      "my_info" : "내 정보",
+      "settings" : "설정"
+    }
+  }
+}

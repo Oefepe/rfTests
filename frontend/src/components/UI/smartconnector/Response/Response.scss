@@ -1,0 +1,27 @@
+@import '../variables';
+div {
+  .responseItem {
+    display: inline-flex;
+    padding: 1.5em;
+    margin-right: 4em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    width: $elementWidth;
+    background: $elementBgColor;
+    max-height: $elementMaxHeight;
+    text-align: center;
+    border-radius: 2em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}
+.columnC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

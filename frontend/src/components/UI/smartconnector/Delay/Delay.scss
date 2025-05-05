@@ -1,0 +1,23 @@
+@import '../variables';
+
+div {
+  .delayItem {
+    display: inline-flex;
+    padding: 1.5em;
+    margin-right: 4em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    width: $elementWidth;
+    background: $elementBgColor;
+    max-height: $elementMaxHeight;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.columnC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

@@ -1,0 +1,30 @@
+{
+  "resetPasswordSingleAccount": {
+    "subject": "[firstName], your [accountName] password reset request",
+    "body": "Hi [firstName],<p>We received a password reset request for [accountName] for you.<br><br>Click this link to reset your password (or copy and paste it into your browser): <br><br> <a href='[resetLink]'>[resetLink]</a><br><br>If you did not send this request, you can ignore this email.<br><br>If you need any assistance, please <a href='https://support.rapidfunnel.com/hc/en-us/requests/new'>contact our support team</a>.<br><br>Thank you!<br><br>[accountName]<br><br>Powered by RapidFunnel"
+  },
+  "resetPasswordMultiAccount": {
+    "subject": "[firstName], your password reset request",
+    "body": "Hi [firstName],<br><br>We received a password reset request for you.<br><br>Click this link to reset your password (or copy and paste it into your browser): <br><br> <a href='[resetLink]'>[resetLink]</a><br><br>If you did not send this request, you can ignore this email.<br><br>If you need any assistance, please <a href='https://support.rapidfunnel.com/hc/en-us/requests/new'>contact our support team</a>.<br><br>Thank you!<br><br>RapidFunnel Support"
+  },
+  "resetPasswordSingleAccountOld": {
+    "subject": "[firstName], your [accountName] password reset request",
+    "body": "Hi [firstName],<p>We received a password reset request for [accountName] for you.<br><br>Please enter this code in the app to set your new password: [secretCode]<br><br>If you did not send this request, you can ignore this email.<br><br>If you need any assistance, please <a href='https://support.rapidfunnel.com/hc/en-us/requests/new'>contact our support team</a>.<br><br>Thank you!"
+  },
+  "resetPasswordMultiAccountOld": {
+    "subject": "[firstName], your password reset request",
+    "body": "Hi [firstName],<br><br>We received a password reset request for you.<br><br>Please enter this code in the app to set your new password: [secretCode]<br><br>If you did not send this request, you can ignore this email.<br><br>If you need any assistance, please <a href='https://support.rapidfunnel.com/hc/en-us/requests/new'>contact our support team</a>.<br><br>Thank you!"
+  },
+  "sendRequestCallEmailToUser": {
+    "subject": "[firstName], [contactFirstName] [contactLastName] has requested a call",
+    "body": "[firstName], <br><br>[contactFirstName] [contactLastName] has just asked for a follow-up phone call with you from the [requestCallSourcePage] page.  <br><br>You can reach them at [contactPhoneNumber] <br><br>Great job prospecting! Be sure to contact them as soon as possible <br><br> Thanks!<br>The [accountName] Team"
+  },
+  "sendCtaEmailToUser": {
+    "subject": "[firstName], [contactFirstName] [contactLastName] has clicked on a button",
+    "body": "[firstName], <br><br>[contactFirstName] [contactLastName] just clicked on the link to [ctaLocation] from the [ctaPageName] page. <br><br>Here are their details, in case you want to follow up with them…<br><br> <ul><li>Email: [contactEmail]</li><li>Phone Number: [contactPhoneNumber]</li></ul> <br> Thanks!<br>The [accountName] Team"
+  },
+  "sendCtaConversionEmailToUser": {
+    "subject": "[firstName], [contactFirstName] [contactLastName] has clicked on a conversion button",
+    "body": "[firstName], <br><br>[contactFirstName] [contactLastName] just clicked on the link to [ctaLocation] from the [ctaPageName] page. <br><br>Here are their details, in case you want to follow up with them…<br><br> <ul><li>Email: [contactEmail]</li><li>Phone Number: [contactPhoneNumber]</li></ul> <br> Thanks!<br>The [accountName] Team"
+  }
+}

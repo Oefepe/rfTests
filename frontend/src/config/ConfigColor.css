@@ -1,0 +1,8 @@
+:root {
+  --active: #79bb00;
+  --action-due: #79bb00;
+  --no-action-due: #e9e91a;
+  --waiting-for-response: #e9e91a;
+  --waiting-for-delay: #ffa500;
+  --in-active: #747474;
+}

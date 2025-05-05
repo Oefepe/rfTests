@@ -1,0 +1,388 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "Add Payment Method",
+      "credit_or_debit" : "Credit or Debit Card",
+      "delete_account" : "DELETE ACCOUNT",
+      "pay_and_upgrade" : "Pay and Upgrade"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "Are you sure?",
+      "main_message" : "Your monthly subscription is paid through the end of your billing period. If you would like to proceed with cancelling your subscription at the end of the period, please click \"Yes, Continue\" below to go to the next screen.\n\nWhen you cancel your subscription you will lose all access to your account, including:",
+      "subscription_cancelled_message" : "Your subscription has been cancelled."
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "We're sorry to see\nyou go!",
+      "main_message" : "Your feedback is valuable! Please take a moment to tell us the reason you cancelled and any other thoughts. ",
+      "notice_alert" : "Your subscription is cancelled. After April 30, 2023 it will no longer be active. "
+    },
+    "field_label" : {
+      "card_number" : "Card Number",
+      "coupon" : "Coupon",
+      "cvv_code" : "CVV Code",
+      "expiration_date" : "Expiration Date (mm/yyyy)",
+      "month" : "Month",
+      "name_on_card" : "Name on Card",
+      "year" : "Year"
+    },
+    "offer_badge" : {
+      "best" : "BEST",
+      "deal" : "DEAL"
+    },
+    "payment_method" : {
+      "credit_card" : "Credit Card",
+      "paypal" : "PayPal"
+    },
+    "plans_pricing" : {
+      "headline" : "Everything in Standard plus..."
+    },
+    "remove_payment_modal" : {
+      "message" : "Are you sure you want to delete this payment method?"
+    },
+    "remove_payment_model" : {
+      "headline" : "Remove Payment Method"
+    },
+    "text" : {
+      "agree_to_term_msg" : "By clicking Pay and Upgrade, you agree to the below policies.",
+      "authorize_cc_msg" : "I authorize RapidFunnel Inc. to charge my account for this amount.",
+      "cancel_subscription" : "CANCEL SUBSCRIPTION",
+      "current_payment_method" : "CURRENT PAYMENT METHOD",
+      "month" : "month",
+      "monthly" : "Monthly",
+      "next_billing_amount" : "Next Billing Amount",
+      "next_billing_date" : "Next Billing Date",
+      "payment" : "Payment",
+      "payment_history" : "PAYMENT HISTORY",
+      "payment_method" : "Payment Method",
+      "paypal_msg" : "By choosing to pay with \"PayPal\", you will be directed outside of this page, where an additional privacy policy and terms of use will apply.",
+      "review" : "Review",
+      "subscription" : "SUBSCRIPTION",
+      "switch_to_yearly" : "SWITCH TO YEARLY",
+      "todays_total" : "Today’s Total",
+      "year" : "year",
+      "yearly" : "Yearly",
+      "yearly_benefit_msg" : "Two months FREE by paying yearly!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "APPLY",
+      "back" : "Back",
+      "cancel" : "Cancel",
+      "contact_support" : "Contact Support",
+      "continue" : "Continue",
+      "delete" : "Delete",
+      "log_out" : "Log Out",
+      "manage" : "Manage",
+      "more" : "More",
+      "next" : "Next",
+      "privacy_policy" : "Privacy Policy",
+      "publish" : "Publish",
+      "save" : "Save",
+      "skip" : "Skip",
+      "submit" : "Submit",
+      "terms_and_conditions" : "Terms and Conditions",
+      "unpublish" : "Unpublish",
+      "upgrade" : "UPGRADE"
+    },
+    "feature_name" : {
+      "coaching" : "Coaching",
+      "events" : "Events",
+      "home" : "Home",
+      "smartconnectors" : "SmartConnectors"
+    },
+    "field_label" : {
+      "address" : "Address",
+      "address1" : "Address Line 1",
+      "address2" : "Address Line 2",
+      "city" : "City",
+      "company_name" : "Company Name",
+      "confirm_new_password" : "Confirm New Password",
+      "confirm_password" : "Confirm Password",
+      "country" : "Country",
+      "email" : "Email",
+      "first_name" : "First Name",
+      "group_code" : "Group Code",
+      "last_name" : "Last Name",
+      "new_password" : "New Password",
+      "password" : "Password",
+      "phone" : "Phone Number",
+      "platform" : "Platform",
+      "social" : "Social",
+      "state_province" : "State or Province",
+      "title_person" : "Title",
+      "zip_postal_code" : "Zip/Postal Code"
+    },
+    "notice" : {
+      "default_error_msg" : "That didn't work as expected. Please try again.",
+      "enter" : "Enter",
+      "error_code" : "Error Code",
+      "incorrect_password" : "Incorrect password",
+      "information" : "Information",
+      "invalid" : "Invalid",
+      "invalid_country_code" : "Invalid country code",
+      "invalid_email_msg" : "Invalid email. Check the format or use another email.",
+      "invalid_phone_msg" : "Invalid phone number. Only numbers and ( ) - allowed.",
+      "invalid_phone_number" : "Invalid phone number",
+      "loading" : "Loading",
+      "no_contacts_to_display" : "There are no contacts to display",
+      "no_data_available" : "No data available",
+      "page_not_found" : "We are unable to find this page on the server.",
+      "password_do_not_match" : "The passwords entered do not match.",
+      "password_minimum" : "Password must be a minimum of 6 characters",
+      "required" : "Required",
+      "servers_unavailable" : "Connection to servers unavailable. Check your connection.  Please contact support if the issue persists.",
+      "success" : "Success",
+      "unknown_email" : "Some emails are hard to confirm! Double check it just in case.",
+      "warning" : "Warning"
+    },
+    "support_url" : "https://support.rapidfunnel.com",
+    "text" : {
+      "and" : "and",
+      "android" : "Android",
+      "ios" : "iOS",
+      "ok" : "OK",
+      "published" : "Published",
+      "thanks" : "Thanks",
+      "yes" : "Yes"
+    },
+    "title" : {
+      "select_language" : "Select App Language "
+    },
+    "user_level" : {
+      "pro" : "PRO",
+      "standard" : "STANDARD"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "Personalization and Notifications",
+      "sub_header_msg" : "You'll be able to update this info any time in your settings. "
+    },
+    "biometrics" : {
+      "header_msg" : "Log In with your Biometrics",
+      "sub-header_msg" : "Touch the fingerprint sensor"
+    },
+    "button" : {
+      "back_to_login" : "Back to Log in Screen",
+      "create_account" : "Create New Account",
+      "fingerprint" : "Fingerprint",
+      "forgot_password" : "Forgot Password?",
+      "get_started" : "Get Started",
+      "log_in" : "Log In",
+      "request_again" : "Request again",
+      "set_password" : "Set Password",
+      "verify" : "Verify"
+    },
+    "choose_account" : "Choose Account",
+    "create_account" : "Create Account",
+    "create_password" : "Create Password",
+    "create_pwd" : {
+      "header_msg" : "Nice to meet you",
+      "sub_header_msg" : "This is your RapidFunnel Username"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "Having trouble signing in?",
+      "login_msg" : "Use your email address and password to login.",
+      "need_new_acct_msg" : "Need to create a new account? Click here",
+      "welcome_back" : "Welcome back"
+    },
+    "enter_email" : {
+      "header_msg" : "Enter your email, you will use it to log in."
+    },
+    "enter_password" : "Enter Password:",
+    "field_label" : {
+      "username_field" : "Email Address"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "Create user in account:",
+      "header_msg" : "Existing user found for:",
+      "welcome_back" : "Welcome back"
+    },
+    "group_code" : {
+      "header_msg" : "You are creating an account from the mobile app and need to enter a group code.",
+      "header_msg_desktop" : "Get all the content for your company. Enter your group code.",
+      "sub_header_msg" : "Don't know your group code? Ask your leader, or Contact Support"
+    },
+    "info_review" : {
+      "enable_finger_print" : "Enable Fingerprint / Touch ID",
+      "header_msg" : "Information Review",
+      "i_agree_to_the" : "I agree to the",
+      "i_agree_to_the_privacy" : "I agree to the <a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">Privacy Policy</a>",
+      "i_agree_to_the_terms" : "I agree to the <a href=\"https://www.rapidfunnel.com/terms-conditions\">Terms and Conditions</a>"
+    },
+    "last_successful_login" : "Last Successful Login",
+    "login" : "Login",
+    "login_remember_pwd" : "Remember password",
+    "no_account_found" : {
+      "header_msg" : "No account found with that information."
+    },
+    "notice" : {
+      "existing_user_in_account" : "A user with this email already exists in this account",
+      "general_user_create_error" : "An unknown error occurred when creating your account.  Contact support.",
+      "incorrect_email_pwd_msg" : "Incorrect email or password, please try again.",
+      "invalid_group" : "Invalid Group Code",
+      "no_matching_email" : "No user found with that email. Please try another email address or contact support.",
+      "restricted_group_code" : "This group code cannot be used during sign up",
+      "user_already_exists" : "User already exists.  Log in or use a different email."
+    },
+    "or_divider" : "OR",
+    "personalize_app" : {
+      "header_msg" : "Personalize your app. What’s your name?"
+    },
+    "post_signup" : {
+      "account_ready_msg" : "Your account is ready!",
+      "for_best_experience_msg" : "For the best experience, use our mobile app.",
+      "get_the_mobile_app" : "Get the Mobile App",
+      "header" : "Congratulations!",
+      "login_with_browser" : "Login with Browser",
+      "remember_to_login_with" : "Remember to login with:",
+      "send_me_the_link" : "Send Me The Link",
+      "sub_head" : "Your account is active!",
+      "welcome_email" : "We sent you a welcome email with instructions for getting the mobile app."
+    },
+    "remember_pwd_msg" : "Remember your password! You'll need it to login.",
+    "reset_password" : {
+      "enter_code" : "Enter Code",
+      "field_label" : {
+        "secret_code" : "Secret Code"
+      },
+      "header" : "Enter your email and we will send a password reset link:",
+      "invalid_code" : "Invalid code",
+      "message" : "Check your email for the reset code.",
+      "resend_code" : "Resend Code",
+      "set_new_password" : "Set New Password",
+      "success_msg" : "Password changed. Login with new password."
+    },
+    "reset_password_msg" : "Reset and send a temporary password for this account? ",
+    "reset_pwd_link_sent_msg" : "Link sent. Check your email. (including SPAM folder)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "Enter mobile number",
+      "header" : "Download the Mobile App",
+      "select_device" : "Select Device",
+      "send_me_the_app" : "Send Me The App",
+      "sub_head" : "You will receive a one-time text with the link to download the app."
+    },
+    "set_up_new" : {
+      "header_msg" : "Set up a new one in just a few steps!"
+    },
+    "update_pwd" : {
+      "header_msg" : "We’ve updated our system!",
+      "improve_exp_msg" : "To improve your login experience, you can now use one password for all your accounts.",
+      "multi_acct_msg" : "You have more than one account using this email"
+    },
+    "verify_phone" : {
+      "header_msg" : "Verify Phone",
+      "receive_code_msg" : "Didn’t receive code?",
+      "sub_header_msg" : "Code sent to:"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "A user does not exist for this email. Make sure you have an account and an active challenge in the WEDO Transformations app. Please try an alternate email or contact your sponsor for assistance."
+    },
+    "welcome" : {
+      "header_msg" : "Welcome to",
+      "sub_header_msg" : "Seamlessly manage relationships and grow your business."
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "Action Name",
+      "notice" : {
+        "action_name_blank_msg" : "Enter the action name",
+        "action_needed_msg" : "Action Needed To Transition"
+      },
+      "title" : "Add New Action"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "Delay Name",
+      "delay_time" : "Delay Time",
+      "delay_time_unit" : "Delay Time Unit",
+      "notice" : {
+        "delay_name_blank_msg" : "Enter the delay name",
+        "delay_unit_blank_msg" : "Enter the delay time unit",
+        "time_blank_msg" : "Enter delay time"
+      },
+      "title" : "Add New Delay"
+    },
+    "add_response_modal" : {
+      "response_name" : "Response Name",
+      "title" : "Add New Response"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "Enter the stage name"
+      },
+      "stage_name" : "Stage Name",
+      "title" : "Add New Stage"
+    },
+    "button" : {
+      "add_action" : "Add Action",
+      "add_delay" : "Add Delay",
+      "add_new" : "Add New",
+      "add_response" : "Add Response",
+      "add_stage" : "Add Stage",
+      "new_smartconnector" : "New SmartConnector"
+    },
+    "delete_confirmation_msg" : "Are you sure you want to delete this SmartConnector?",
+    "label" : {
+      "edit_action" : "Edit Action",
+      "edit_stage" : "Edit Stage"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "Action Needed to Transition Contacts in Each Stage",
+      "no_stages_msg" : "No stages found for this SmartConnector"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "Number of Active and Inactive Contacts in Each Stage",
+      "avg_transition_graph" : "Average Transition Time for Contacts in Each Stage",
+      "contact_conversion_graph_title" : "Contact Conversion From First Stage",
+      "contacts_transition_percent" : "Contacts Transitioned",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "Number of Contacts"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "Stages"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "Account Level",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "Upload From Gallery",
+        "new_photo" : "New Photo From Camera"
+      }
+    },
+    "links" : {
+      "meeting_link" : "Meeting Link",
+      "my_website" : "My Website"
+    },
+    "my_info" : {
+      "custom_fields" : "Custom Fields"
+    },
+    "settings" : {
+      "app_language" : "App Language",
+      "delete_account" : "Delete Account",
+      "group_code" : "Group Codes",
+      "group_codes" : {
+        "add_a_group_code" : "Add a Group Code",
+        "delete_group_code_msg" : "Are you sure you want to remove the group code?",
+        "existing_group_msg" : "You are already in this group."
+      },
+      "notification_settings" : "Notification Settings",
+      "reset_defaults" : "Reset Defaults",
+      "security" : "Security",
+      "time_zone" : "Time Zone",
+      "training_partner" : "Training Partner",
+      "user_alias" : "User Alias",
+      "user_alias_tooltip" : "This alias will be used to personalize the links you send to your contacts."
+    },
+    "tabs" : {
+      "links" : "Links",
+      "my_info" : "My Info",
+      "settings" : "Settings"
+    }
+  }
+}

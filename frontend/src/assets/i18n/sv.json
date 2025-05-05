@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "Lägg till betalningsmetod",
+      "credit_or_debit" : "Kredit-eller betalkort",
+      "delete_account" : "RADERA KONTO",
+      "pay_and_upgrade" : "Betala och uppgradera"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "Är du säker?",
+      "main_message" : "Ditt månatliga abonnemang betalas till slutet av din faktureringsperiod. Om du vill fortsätta med att avsluta din prenumeration i slutet av perioden, klicka på \"Ja, fortsätt\" nedan för att gå till nästa skärm.\n\nNär du avslutar din prenumeration kommer du att förlora all åtkomst till ditt konto, inklusive:",
+      "subscription_cancelled_message" : "Ditt abonnemang har avslutats."
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "Vi är ledsna att se\ndu går!",
+      "main_message" : "Din feedback är värdefull! Vänligen ägna en stund åt att berätta varför du avbröt och andra tankar.",
+      "notice_alert" : "Ditt abonnemang är uppsagt. Efter den 30 april 2023 kommer den inte längre att vara aktiv."
+    },
+    "field_label" : {
+      "card_number" : "Kortnummer",
+      "coupon" : "Kupong",
+      "cvv_code" : "CVV-kod",
+      "expiration_date" : "Utgångsdatum (mm/åååå)",
+      "month" : "Månad",
+      "name_on_card" : "Namn på kort",
+      "year" : "År"
+    },
+    "offer_badge" : {
+      "best" : "BÄST",
+      "deal" : "HANDLA"
+    },
+    "payment_method" : {
+      "credit_card" : "Kreditkort",
+      "paypal" : "PayPal"
+    },
+    "plans_pricing" : {
+      "headline" : "Allt i standard plus..."
+    },
+    "remove_payment_modal" : {
+      "message" : "Är du säker på att du vill ta bort den här betalningsmetoden?"
+    },
+    "remove_payment_model" : {
+      "headline" : "Ta bort betalningsmetod"
+    },
+    "text" : {
+      "agree_to_term_msg" : "Genom att klicka på Betala och uppgradera godkänner du nedanstående policyer.",
+      "authorize_cc_msg" : "Jag godkänner RapidFunnel Inc. att debitera mitt konto för detta belopp.",
+      "cancel_subscription" : "AVBRYT PRENUMERATION",
+      "current_payment_method" : "NUVARANDE BETALNINGSMETOD",
+      "month" : "månad",
+      "monthly" : "En gång i månaden",
+      "next_billing_amount" : "Nästa faktureringsbelopp",
+      "next_billing_date" : "Nästa faktureringsdatum",
+      "payment" : "Betalning",
+      "payment_history" : "BETALNINGSHISTORIK",
+      "payment_method" : "Betalningsmetod",
+      "paypal_msg" : "Genom att välja att betala med \"PayPal\" kommer du att dirigeras utanför denna sida, där ytterligare en integritetspolicy och användarvillkor kommer att gälla.",
+      "review" : "Recension",
+      "subscription" : "PRENUMERATION",
+      "switch_to_yearly" : "BYT TILL ÅRLIGT",
+      "todays_total" : "Dagens summa",
+      "year" : "år",
+      "yearly" : "Årlig",
+      "yearly_benefit_msg" : "Två månader GRATIS genom att betala årligen!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "TILLÄMPA",
+      "back" : "Tillbaka",
+      "cancel" : "Annullera",
+      "contact_support" : "Kontakta supporten",
+      "continue" : "Fortsätta",
+      "delete" : "Radera",
+      "log_out" : "Logga ut",
+      "manage" : "Hantera",
+      "more" : "Mer",
+      "next" : "Nästa",
+      "privacy_policy" : "Sekretesspolicy",
+      "publish" : "Publicera",
+      "save" : "Spara",
+      "skip" : "Hoppa",
+      "submit" : "Skicka in",
+      "terms_and_conditions" : "Villkor",
+      "unpublish" : "Avpublicera",
+      "upgrade" : "UPPGRADERA"
+    },
+    "feature_name" : {
+      "coaching" : "Coaching",
+      "events" : "evenemang",
+      "home" : "Hem"
+    },
+    "field_label" : {
+      "address" : "Adress",
+      "address1" : "Adressrad 1",
+      "address2" : "Adress Linje 2",
+      "city" : "Stad",
+      "company_name" : "Företagsnamn",
+      "confirm_new_password" : "Bekräfta nytt lösenord",
+      "confirm_password" : "Bekräfta lösenord",
+      "country" : "Land",
+      "email" : "E-post",
+      "first_name" : "Förnamn",
+      "group_code" : "Gruppkod",
+      "last_name" : "Efternamn",
+      "new_password" : "nytt lösenord",
+      "password" : "Lösenord",
+      "phone" : "Telefon",
+      "platform" : "Plattform",
+      "social" : "Social",
+      "state_province" : "Stat eller provins",
+      "title_person" : "Titel",
+      "zip_postal_code" : "Postnummer"
+    },
+    "notice" : {
+      "default_error_msg" : "Något gick fel. Var god försök igen.",
+      "enter" : "Stiga på",
+      "error_code" : "Felkod",
+      "incorrect_password" : "fel lösenord",
+      "information" : "Information",
+      "invalid" : "Ogiltig",
+      "invalid_country_code" : "Ogiltig landskod",
+      "invalid_email_msg" : "E-post är inte giltig. Kontrollera formatet eller använd en annan e-post.",
+      "invalid_phone_msg" : "Ogiltigt telefonnummer. Endast siffror och ( ) - tillåtna.",
+      "invalid_phone_number" : "Ogiltigt telefonnummer",
+      "loading" : "Läser in",
+      "no_contacts_to_display" : "Det finns inga kontakter att visa",
+      "no_data_available" : "Ingen data tillgänglig",
+      "page_not_found" : "Vi kan inte hitta den här sidan på servern.",
+      "password_do_not_match" : "De angivna lösenorden gör det inte\nmatch.",
+      "password_minimum" : "Lösenordet måste vara ett minimum av\n6 tecken",
+      "required" : "Titel krävs",
+      "servers_unavailable" : "Anslutning till servrar inte tillgänglig. Kontrollera din anslutning. Kontakta supporten om problemet kvarstår.",
+      "success" : "Framgång",
+      "unknown_email" : "Vissa mejl är svåra att bekräfta! Dubbelkolla det för säkerhets skull.",
+      "warning" : "Varning"
+    },
+    "text" : {
+      "and" : "och",
+      "ok" : "OK",
+      "published" : "Publicerad",
+      "thanks" : "Tack",
+      "yes" : "Ja"
+    },
+    "title" : {
+      "select_language" : "Välj appspråk"
+    },
+    "user_level" : {
+      "pro" : "PROFFS",
+      "standard" : "STANDARD"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "Personalisering och aviseringar",
+      "sub_header_msg" : "Du kommer att kunna uppdatera denna information när som helst i dina inställningar."
+    },
+    "biometrics" : {
+      "header_msg" : "Logga in med din Biometri",
+      "sub-header_msg" : "Tryck på fingeravtryckssensorn"
+    },
+    "button" : {
+      "back_to_login" : "Tillbaka till inloggningsskärmen",
+      "create_account" : "Skapa nytt konto",
+      "fingerprint" : "Fingeravtryck",
+      "forgot_password" : "Glömt ditt lösenord?",
+      "get_started" : "Komma igång",
+      "log_in" : "Logga in",
+      "request_again" : "Begär igen",
+      "set_password" : "Välj lösenord",
+      "verify" : "Kontrollera"
+    },
+    "choose_account" : "Välj Konto",
+    "create_account" : "Skapa konto",
+    "create_password" : "Skapa lösenord",
+    "create_pwd" : {
+      "header_msg" : "Trevligt att träffas",
+      "sub_header_msg" : "Detta är ditt RapidFunnel-användarnamn"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "Har du problem med att logga in?",
+      "login_msg" : "Använd din e-postadress och ditt lösenord för att logga in.",
+      "need_new_acct_msg" : "Behöver du skapa ett nytt konto? Klicka här",
+      "welcome_back" : "Välkommen tillbaka"
+    },
+    "enter_email" : {
+      "header_msg" : "Ange din e-postadress, du använder den för att logga in."
+    },
+    "enter_password" : "Skriv in lösenord",
+    "field_label" : {
+      "username_field" : "E-post eller telefonnummer"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "Skapa användare i konto:",
+      "header_msg" : "Befintlig användare hittades för:",
+      "welcome_back" : "Välkommen tillbaka"
+    },
+    "group_code" : {
+      "header_msg" : "Få allt innehåll för ditt företag. Ange din gruppkod.",
+      "header_msg_desktop" : "Få allt innehåll för ditt företag. Ange din gruppkod.",
+      "sub_header_msg" : "Vet du inte din gruppkod?\nFråga din ledare, eller"
+    },
+    "info_review" : {
+      "enable_finger_print" : "Aktivera Fingerprint / Touch ID",
+      "header_msg" : "Informationsgranskning",
+      "i_agree_to_the" : "Jag godkänner",
+      "i_agree_to_the_privacy" : "Jag godkänner <a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">sekretesspolicyn</a>",
+      "i_agree_to_the_terms" : "Jag godkänner"
+    },
+    "last_successful_login" : "Senaste lyckade inloggningen",
+    "login" : "Logga in",
+    "login_remember_pwd" : "Kom ihåg lösenord",
+    "no_account_found" : {
+      "header_msg" : "Inget konto hittades med den informationen."
+    },
+    "notice" : {
+      "existing_user_in_account" : "En användare med denna e-postadress finns redan i det här kontot",
+      "general_user_create_error" : "Ett okänt fel uppstod när ditt konto skapades. Kontakta supporten.",
+      "incorrect_email_pwd_msg" : "Felaktig e-postadress eller lösenord, försök igen.",
+      "invalid_group" : "Ogiltig gruppkod",
+      "no_matching_email" : "Ingen användare hittades med den e-postadressen. Försök med en annan e-postadress eller kontakta supporten.",
+      "restricted_group_code" : "Denna gruppkod kan inte användas under registreringen",
+      "user_already_exists" : "Användare finns redan. Logga in eller använd en annan e-postadress."
+    },
+    "or_divider" : "Eller",
+    "personalize_app" : {
+      "header_msg" : "Anpassa din app.\nVad heter du?"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "Grattis!\nDitt konto är klart!",
+      "for_best_experience_msg" : "För den bästa upplevelsen, använd vår mobilapp.",
+      "get_the_mobile_app" : "Skaffa mobilappen",
+      "header" : "Grattis!",
+      "login_with_browser" : "Logga in med webbläsaren",
+      "remember_to_login_with" : "Kom ihåg att logga in med:",
+      "send_me_the_link" : "Skicka länken",
+      "sub_head" : "Ditt konto är aktivt!"
+    },
+    "remember_pwd_msg" : "Kom ihåg ditt lösenord! Du behöver det för att logga in.",
+    "reset_password" : {
+      "enter_code" : "Ange kod",
+      "field_label" : {
+        "secret_code" : "Hemlig kod"
+      },
+      "header" : "Skicka instruktioner för återställning av lösenord för det här kontot?",
+      "invalid_code" : "Ogiltig kod",
+      "message" : "Kontrollera din e-post för återställningskoden.",
+      "resend_code" : "Återsänd koden",
+      "set_new_password" : "Ange nytt lösenord",
+      "success_msg" : "Lösenordet ändrat. Logga in med nytt lösenord."
+    },
+    "reset_password_msg" : "Återställa och skicka ett tillfälligt lösenord för det här kontot?",
+    "reset_pwd_link_sent_msg" : "Länk skickad. Kolla din mail. (inklusive SPAM-mappen)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "Ange mobilnummer",
+      "header" : "Ladda ner mobilappen",
+      "select_device" : "Välj Enhet",
+      "send_me_the_app" : "Skicka mig appen",
+      "sub_head" : "Du kommer att få ett engångssms med länken för att ladda ner appen."
+    },
+    "set_up_new" : {
+      "header_msg" : "Skapa en ny med bara några få steg!"
+    },
+    "update_pwd" : {
+      "header_msg" : "Vi har uppdaterat vårt system!",
+      "improve_exp_msg" : "För att förbättra din inloggningsupplevelse kan du nu använda ett lösenord för alla dina konton.",
+      "multi_acct_msg" : "Du har mer än ett konto med den här e-postadressen"
+    },
+    "verify_phone" : {
+      "header_msg" : "Verifiera telefon",
+      "receive_code_msg" : "Fick du ingen kod?",
+      "sub_header_msg" : "Koden skickas till"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "Det finns ingen användare för detta e-postmeddelande. Se till att du har ett konto och en aktiv utmaning i WEDO Transformations-appen. Försök med en alternativ e-post eller kontakta din sponsor för hjälp."
+    },
+    "welcome" : {
+      "header_msg" : "Välkommen till",
+      "sub_header_msg" : "Hantera relationer sömlöst och utveckla ditt företag."
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "Åtgärdsnamn",
+      "notice" : {
+        "action_name_blank_msg" : "Ange åtgärdens namn",
+        "action_needed_msg" : "Åtgärd som behövs för att övergå"
+      },
+      "title" : "Lägg till ny åtgärd"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "Fördröjningsnamn",
+      "delay_time" : "Försening",
+      "delay_time_unit" : "Fördröjningstidsenhet",
+      "notice" : {
+        "delay_name_blank_msg" : "Ange fördröjningsnamnet",
+        "delay_unit_blank_msg" : "Ange fördröjningstidsenheten",
+        "time_blank_msg" : "Ange fördröjningstid"
+      },
+      "title" : "Lägg till ny fördröjning"
+    },
+    "add_response_modal" : {
+      "response_name" : "Svarsnamn",
+      "title" : "Lägg till nytt svar"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "Ange scennamnet"
+      },
+      "stage_name" : "Artistnamn",
+      "title" : "Lägg till ny scen"
+    },
+    "button" : {
+      "add_action" : "Lägg till åtgärd",
+      "add_delay" : "Lägg till fördröjning",
+      "add_new" : "Lägg till ny",
+      "add_response" : "Lägg till svar",
+      "add_stage" : "Lägg till scen",
+      "new_smartconnector" : "Ny SmartConnector"
+    },
+    "delete_confirmation_msg" : "Är du säker på att du vill ta bort denna SmartConnector?",
+    "label" : {
+      "edit_action" : "Redigera åtgärd",
+      "edit_stage" : "Redigera scenen"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "Åtgärd som behövs för att överföra kontakter i varje steg",
+      "no_stages_msg" : "Inga steg hittades för denna SmartConnector"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "Antal aktiva och inaktiva kontakter i varje steg",
+      "avg_transition_graph" : "Genomsnittlig övergångstid för kontakter i varje steg",
+      "contact_conversion_graph_title" : "Kontaktkonvertering från första steget",
+      "contacts_transition_percent" : "Kontakter har överförts {{percentage}} %",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "Antal kontakter"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "Etapper"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "Kontonivå",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "Ladda upp från Galleri",
+        "new_photo" : "Nytt foto från kameran"
+      }
+    },
+    "links" : {
+      "meeting_link" : "Möteslänk",
+      "my_website" : "Min webbsida"
+    },
+    "my_info" : {
+      "custom_fields" : "Anpassade fält"
+    },
+    "settings" : {
+      "app_language" : "Appens språk",
+      "delete_account" : "Radera konto",
+      "group_code" : "Gruppkoder",
+      "group_codes" : {
+        "add_a_group_code" : "Lägg till en gruppkod",
+        "delete_group_code_msg" : "Är du säker på att du vill ta bort gruppkoden?",
+        "existing_group_msg" : "Du är redan i den här gruppen."
+      },
+      "notification_settings" : "Aviseringsinställningar",
+      "reset_defaults" : "Återställ standardvärden",
+      "security" : "säkerhet",
+      "time_zone" : "Tidszon",
+      "training_partner" : "Utbildningspartner",
+      "user_alias" : "Användaralias",
+      "user_alias_tooltip" : "Detta alias kommer att användas för att anpassa länkarna du skickar till dina kontakter."
+    },
+    "tabs" : {
+      "links" : "Länkar",
+      "my_info" : "Min info",
+      "settings" : "inställningar"
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "billing" : {
+    "button" : {
+      "add_payment_method" : "Ödeme yöntemi ekle",
+      "credit_or_debit" : "Kredi veya Banka Kartı",
+      "delete_account" : "HESABI SİL",
+      "pay_and_upgrade" : "Ödeme ve Yükseltme"
+    },
+    "cancel_subscription_modal" : {
+      "headline" : "Emin misin?",
+      "main_message" : "Aylık aboneliğiniz fatura döneminizin sonuna kadar ödenir. Süre sonunda aboneliğinizi iptal etme işlemine devam etmek istiyorsanız lütfen aşağıdaki \"Evet, Devam Et\" seçeneğine tıklayarak bir sonraki ekrana geçin.\n\nAboneliğinizi iptal ettiğinizde aşağıdakiler de dahil olmak üzere hesabınıza tüm erişiminizi kaybedersiniz:",
+      "subscription_cancelled_message" : "Aboneliğiniz iptal edildi."
+    },
+    "cancel_subscription_modal_screen2" : {
+      "headline" : "gördüğümüze üzüldük\ngit!",
+      "main_message" : "Geri bildiriminiz değerlidir! Lütfen bir dakikanızı ayırıp iptal etme nedeninizi ve diğer düşüncelerinizi bize bildirin.",
+      "notice_alert" : "Aboneliğiniz iptal edildi. 30 Nisan 2023'ten sonra artık aktif olmayacaktır."
+    },
+    "field_label" : {
+      "card_number" : "Kart numarası",
+      "coupon" : "Kupon",
+      "cvv_code" : "CVV kodu",
+      "expiration_date" : "Son Kullanma Tarihi (aa/yyyy)",
+      "month" : "Ay",
+      "name_on_card" : "Karttaki İsim",
+      "year" : "Yıl"
+    },
+    "offer_badge" : {
+      "best" : "EN İYİ",
+      "deal" : "ANLAŞMAK"
+    },
+    "payment_method" : {
+      "credit_card" : "Kredi kartı",
+      "paypal" : "PayPal"
+    },
+    "plans_pricing" : {
+      "headline" : "Herşey Standart plus'ta..."
+    },
+    "remove_payment_modal" : {
+      "message" : "Bu ödeme yöntemini silmek istediğinizden emin misiniz?"
+    },
+    "remove_payment_model" : {
+      "headline" : "Ödeme Yöntemini Kaldır"
+    },
+    "text" : {
+      "agree_to_term_msg" : "Öde ve Yükselt'e tıklayarak aşağıdaki politikaları kabul etmiş olursunuz.",
+      "authorize_cc_msg" : "RapidFunnel Inc.'e bu tutarı hesabımdan çekme yetkisi veriyorum.",
+      "cancel_subscription" : "ABONELİĞİ İPTAL ET",
+      "current_payment_method" : "GÜNCEL ÖDEME ŞEKLİ",
+      "month" : "ay",
+      "monthly" : "Aylık",
+      "next_billing_amount" : "Sonraki Fatura Tutarı",
+      "next_billing_date" : "Sonraki Fatura Tarihi",
+      "payment" : "Ödeme",
+      "payment_history" : "ÖDEME GEÇMİŞİ",
+      "payment_method" : "Ödeme yöntemi",
+      "paypal_msg" : "\"PayPal\" ile ödeme yapmayı seçtiğinizde, ek bir gizlilik politikasının ve kullanım koşullarının geçerli olacağı bu sayfanın dışına yönlendirileceksiniz.",
+      "review" : "Gözden geçirmek",
+      "subscription" : "ABONELİK",
+      "switch_to_yearly" : "YILLIK DÖNEME GEÇ",
+      "todays_total" : "Bugünün Toplamı",
+      "year" : "yıl",
+      "yearly" : "Yıllık",
+      "yearly_benefit_msg" : "Yıllık ödeme yaparak iki ay ÜCRETSİZ!"
+    }
+  },
+  "common" : {
+    "button" : {
+      "apply" : "UYGULA",
+      "back" : "Geri",
+      "cancel" : "İptal etmek",
+      "contact_support" : "İletişim desteği",
+      "continue" : "Devam etmek",
+      "delete" : "Silmek",
+      "log_out" : "Çıkış Yap",
+      "manage" : "Üstesinden gelmek",
+      "more" : "Daha",
+      "next" : "Sonraki",
+      "privacy_policy" : "Gizlilik Politikası",
+      "publish" : "Yayınla",
+      "save" : "Kaydetmek",
+      "skip" : "Atlamak",
+      "submit" : "Göndermek",
+      "terms_and_conditions" : "Şartlar ve koşullar",
+      "unpublish" : "Yayından kaldır",
+      "upgrade" : "GÜNCELLEME"
+    },
+    "feature_name" : {
+      "coaching" : "Antrenörlük",
+      "events" : "Olaylar",
+      "home" : "Ev"
+    },
+    "field_label" : {
+      "address" : "Adres",
+      "address1" : "Adres satırı 1",
+      "address2" : "Adres Satırı 2",
+      "city" : "Şehir",
+      "company_name" : "Firma Adı",
+      "confirm_new_password" : "Yeni şifreyi onayla",
+      "confirm_password" : "Şifreyi Onayla",
+      "country" : "Ülke",
+      "email" : "E-posta",
+      "first_name" : "İlk adı",
+      "group_code" : "Grup kodu",
+      "last_name" : "Soy isim",
+      "new_password" : "Yeni Şifre",
+      "password" : "Şifre",
+      "phone" : "Telefon",
+      "platform" : "Platform",
+      "social" : "Sosyal",
+      "state_province" : "Eyalet veya İl",
+      "title_person" : "Başlık",
+      "zip_postal_code" : "Posta/Posta Kodu"
+    },
+    "notice" : {
+      "default_error_msg" : "Bir şeyler yanlış gitti. Lütfen tekrar deneyin.",
+      "enter" : "Girmek",
+      "error_code" : "Hata Kodu",
+      "incorrect_password" : "yanlış parola",
+      "information" : "Bilgi",
+      "invalid" : "Geçersiz",
+      "invalid_country_code" : "Geçersiz ülke kodu",
+      "invalid_email_msg" : "E-posta geçerli değil. Lütfen formatı kontrol edin veya başka bir e-posta kullanın.",
+      "invalid_phone_msg" : "Geçersiz telefon numarası. Yalnızca sayılara ve ( ) - izin verilir.",
+      "invalid_phone_number" : "Geçersiz telefon numarası",
+      "loading" : "Yükleniyor",
+      "no_contacts_to_display" : "Görüntülenecek kişi yok",
+      "no_data_available" : "Veri yok",
+      "page_not_found" : "Bu sayfayı sunucuda bulamıyoruz.",
+      "password_do_not_match" : "Girilen şifreler geçerli değil\nkibrit.",
+      "password_minimum" : "Şifre minimum olmalıdır\n6 karakter",
+      "required" : "Başlık gerekli",
+      "servers_unavailable" : "Sunuculara bağlantı kullanılamıyor. Bağlantınızı kontrol edin. Sorun devam ederse lütfen destekle iletişime geçin.",
+      "success" : "Başarı",
+      "unknown_email" : "Bazı e-postaların onaylanması zordur! Her ihtimale karşı iki kez kontrol edin.",
+      "warning" : "Uyarı"
+    },
+    "text" : {
+      "and" : "Ve",
+      "ok" : "TAMAM",
+      "published" : "Yayınlanan",
+      "thanks" : "Teşekkürler",
+      "yes" : "Evet"
+    },
+    "title" : {
+      "select_language" : "Uygulama Dilini Seçin"
+    },
+    "user_level" : {
+      "pro" : "PRO",
+      "standard" : "STANDART"
+    }
+  },
+  "login_signup" : {
+    "additional_fields" : {
+      "header" : "Kişiselleştirme ve Bildirimler",
+      "sub_header_msg" : "Bu bilgiyi istediğiniz zaman ayarlarınızdan güncelleyebilirsiniz."
+    },
+    "biometrics" : {
+      "header_msg" : "Biyometrik Bilgilerinizle Giriş Yapın",
+      "sub-header_msg" : "Parmak izi sensörüne dokunun"
+    },
+    "button" : {
+      "back_to_login" : "Oturum Açma Ekranına Geri Dön",
+      "create_account" : "Yeni hesap oluştur",
+      "fingerprint" : "Parmak izi",
+      "forgot_password" : "Parolanızı mı unuttunuz?",
+      "get_started" : "Başlamak",
+      "log_in" : "Giriş yapmak",
+      "request_again" : "Tekrar iste",
+      "set_password" : "Şifreyi belirle",
+      "verify" : "Doğrulamak"
+    },
+    "choose_account" : "Hesap Seçin",
+    "create_account" : "Hesap oluşturmak",
+    "create_password" : "Şifre oluştur",
+    "create_pwd" : {
+      "header_msg" : "Tanıştığıma memnun oldum",
+      "sub_header_msg" : "Bu sizin RapidFunnel Kullanıcı Adınızdır"
+    },
+    "custom_sso" : {
+      "having_trouble_msg" : "Giriş yapmakta problem mi yaşıyorsunuz?",
+      "login_msg" : "Giriş yapmak için e-posta adresinizi ve şifrenizi kullanın.",
+      "need_new_acct_msg" : "Yeni bir hesap oluşturmanız mı gerekiyor? buraya tıklayın",
+      "welcome_back" : "tekrar hoşgeldiniz"
+    },
+    "enter_email" : {
+      "header_msg" : "E-postanızı girin, oturum açmak için onu kullanacaksınız."
+    },
+    "enter_password" : "Parolanı Gir",
+    "field_label" : {
+      "username_field" : "E-posta veya Telefon Numarası"
+    },
+    "found_existing_account" : {
+      "create_user_in_account" : "Hesapta kullanıcı oluştur:",
+      "header_msg" : "Şunun için mevcut kullanıcı bulundu:",
+      "welcome_back" : "tekrar hoşgeldiniz"
+    },
+    "group_code" : {
+      "header_msg" : "Şirketiniz için tüm içeriği edinin. Grup kodunuzu girin.",
+      "header_msg_desktop" : "Şirketiniz için tüm içeriği alın. Grup kodunuzu girin.",
+      "sub_header_msg" : "Grup kodunuzu bilmiyor musunuz?\nLiderinize sorun veya"
+    },
+    "info_review" : {
+      "enable_finger_print" : "Parmak İzi / Dokunmatik Kimliği Etkinleştir",
+      "header_msg" : "Bilgi İncelemesi",
+      "i_agree_to_the" : "Katılıyorum",
+      "i_agree_to_the_privacy" : "<a href=\"https://www.rapidfunnel.com/privacy_policy_terms/\">Gizlilik Politikası</a>'nı kabul ediyorum",
+      "i_agree_to_the_terms" : "Katılıyorum"
+    },
+    "last_successful_login" : "Son Başarılı Giriş",
+    "login" : "Giriş yapmak",
+    "login_remember_pwd" : "Şifre hatırlamak",
+    "no_account_found" : {
+      "header_msg" : "Bu bilgilere sahip bir hesap bulunamadı."
+    },
+    "notice" : {
+      "existing_user_in_account" : "Bu e-postaya sahip bir kullanıcı bu hesapta zaten mevcut",
+      "general_user_create_error" : "Hesabınızı oluştururken bilinmeyen bir hata oluştu. İletişim desteği.",
+      "incorrect_email_pwd_msg" : "Yanlış e-posta veya şifre, lütfen tekrar deneyin.",
+      "invalid_group" : "Geçersiz Grup Kodu",
+      "no_matching_email" : "Bu e-postaya sahip kullanıcı bulunamadı. Lütfen başka bir e-posta adresi deneyin veya destek ekibiyle iletişime geçin.",
+      "restricted_group_code" : "Bu grup kodu kayıt sırasında kullanılamaz",
+      "user_already_exists" : "Kullanıcı zaten var. Giriş yapın veya farklı bir e-posta kullanın."
+    },
+    "or_divider" : "Veya",
+    "personalize_app" : {
+      "header_msg" : "Uygulamanızı kişiselleştirin.\nAdınız ne?"
+    },
+    "post_signup" : {
+      "congratulations_account_ready_msg" : "Tebrikler!\nHesabınız hazır!",
+      "for_best_experience_msg" : "En iyi deneyim için mobil uygulamamızı kullanın.",
+      "get_the_mobile_app" : "Mobil Uygulamayı Alın",
+      "header" : "Tebrikler!",
+      "login_with_browser" : "Tarayıcı ile Giriş Yapın",
+      "remember_to_login_with" : "Şununla giriş yapmayı unutmayın:",
+      "send_me_the_link" : "Bana bağlantıyı gönder",
+      "sub_head" : "Hesabınız aktif!"
+    },
+    "remember_pwd_msg" : "Şifrenizi unutmayın! Giriş yapmak için buna ihtiyacınız olacak.",
+    "reset_password" : {
+      "enter_code" : "Kodu girin",
+      "field_label" : {
+        "secret_code" : "Gizli kod"
+      },
+      "header" : "Bu hesap için şifre sıfırlama talimatları gönderilsin mi?",
+      "invalid_code" : "Geçersiz kod",
+      "message" : "Sıfırlama kodu için e-postanızı kontrol edin.",
+      "resend_code" : "Yeniden gönderme kodu",
+      "set_new_password" : "Yeni Şifre Belirle",
+      "success_msg" : "Şifre değişti. Yeni şifreyle giriş yapın."
+    },
+    "reset_password_msg" : "Bu hesap için geçici bir şifre sıfırlanıp gönderilsin mi?",
+    "reset_pwd_link_sent_msg" : "Bağlantı gönderildi. E-postanı kontrol et. (SPAM klasörü dahil)",
+    "send_app_modal" : {
+      "enter_mobile_number" : "Cep telefonu numarasını girin",
+      "header" : "Mobil Uygulamayı İndirin",
+      "select_device" : "Cihazı Seçin",
+      "send_me_the_app" : "Bana Uygulamayı Gönder",
+      "sub_head" : "Uygulamayı indirme bağlantısını içeren tek seferlik bir metin alacaksınız."
+    },
+    "set_up_new" : {
+      "header_msg" : "Sadece birkaç adımda yeni bir tane kurun!"
+    },
+    "update_pwd" : {
+      "header_msg" : "Sistemimizi güncelledik!",
+      "improve_exp_msg" : "Giriş deneyiminizi geliştirmek amacıyla artık tüm hesaplarınız için tek bir şifre kullanabilirsiniz.",
+      "multi_acct_msg" : "Bu e-postayı kullanan birden fazla hesabınız var"
+    },
+    "verify_phone" : {
+      "header_msg" : "Telefonu Doğrula",
+      "receive_code_msg" : "Kod almadınız mı?",
+      "sub_header_msg" : "Kod şu adrese gönderildi:"
+    },
+    "wdtconnect" : {
+      "email_not_found_msg" : "Bu e-posta için bir kullanıcı mevcut değil. WEDO Transformations uygulamasında bir hesabınız ve aktif bir mücadeleniz olduğundan emin olun. Lütfen alternatif bir e-posta deneyin veya yardım için sponsorunuzla iletişime geçin."
+    },
+    "welcome" : {
+      "header_msg" : "Hoşgeldiniz",
+      "sub_header_msg" : "İlişkileri sorunsuz bir şekilde yönetin ve işinizi büyütün."
+    }
+  },
+  "smartconnectors" : {
+    "add_action_modal" : {
+      "action_name" : "Eylem Adı",
+      "notice" : {
+        "action_name_blank_msg" : "Eylem adını girin",
+        "action_needed_msg" : "Geçiş İçin İşlem Gerekiyor"
+      },
+      "title" : "Yeni Eylem Ekle"
+    },
+    "add_delay_modal" : {
+      "delay_name" : "Gecikme Adı",
+      "delay_time" : "Gecikme süresi",
+      "delay_time_unit" : "Gecikme Süresi Birimi",
+      "notice" : {
+        "delay_name_blank_msg" : "Gecikme adını girin",
+        "delay_unit_blank_msg" : "Gecikme süresi birimini girin",
+        "time_blank_msg" : "Gecikme süresini girin"
+      },
+      "title" : "Yeni Gecikme Ekle"
+    },
+    "add_response_modal" : {
+      "response_name" : "Yanıt Adı",
+      "title" : "Yeni Yanıt Ekle"
+    },
+    "add_stage_modal" : {
+      "notice" : {
+        "stage_name_blank_msg" : "Sahne adını girin"
+      },
+      "stage_name" : "Sahne adı",
+      "title" : "Yeni Aşama Ekle"
+    },
+    "button" : {
+      "add_action" : "Eylem Ekle",
+      "add_delay" : "Gecikme Ekle",
+      "add_new" : "Yeni ekle",
+      "add_response" : "Yanıt Ekle",
+      "add_stage" : "Aşama Ekle",
+      "new_smartconnector" : "Yeni SmartConnector"
+    },
+    "delete_confirmation_msg" : "Bu SmartConnector'ı silmek istediğinizden emin misiniz?",
+    "label" : {
+      "edit_action" : "Eylemi Düzenle",
+      "edit_stage" : "Aşamayı Düzenle"
+    },
+    "notice" : {
+      "action_needed_stages_msg" : "Her Aşamada İlgili Kişilerin Geçişi İçin Eylem Gerekiyor",
+      "no_stages_msg" : "Bu SmartConnector için aşama bulunamadı"
+    },
+    "statistics" : {
+      "active_contacts_graph_title" : "Her Aşamadaki Etkin ve Etkin Olmayan Kişi Sayısı",
+      "avg_transition_graph" : "Her Aşamada Temaslar İçin Ortalama Geçiş Süresi",
+      "contact_conversion_graph_title" : "Birinci Aşamadan İrtibat Dönüşümü",
+      "contacts_transition_percent" : "Kişilerin Geçişi %{{percentage}} oranında yapıldı",
+      "contacts_transitioning" : {
+        "graph" : {
+          "title" : "Kişi Sayısı"
+        }
+      }
+    },
+    "text" : {
+      "stages" : "Aşamalar"
+    }
+  },
+  "user_settings" : {
+    "account_level" : "Hesap Düzeyi",
+    "change_photo" : {
+      "button" : {
+        "gallery" : "Galeriden Yükle",
+        "new_photo" : "Kameradan Yeni Fotoğraf"
+      }
+    },
+    "links" : {
+      "meeting_link" : "Toplantı Bağlantısı",
+      "my_website" : "İnternet sitem"
+    },
+    "my_info" : {
+      "custom_fields" : "Özel Alanlar"
+    },
+    "settings" : {
+      "app_language" : "Uygulama Dili",
+      "delete_account" : "Hesabı sil",
+      "group_code" : "Grup Kodları",
+      "group_codes" : {
+        "add_a_group_code" : "Grup Kodu Ekle",
+        "delete_group_code_msg" : "Grup kodunu kaldırmak istediğinizden emin misiniz?",
+        "existing_group_msg" : "Zaten bu gruptasınız."
+      },
+      "notification_settings" : "Bildirim ayarları",
+      "reset_defaults" : "Varsayılanları Sıfırla",
+      "security" : "Güvenlik",
+      "time_zone" : "Saat dilimi",
+      "training_partner" : "Eğitim Ortağı",
+      "user_alias" : "Kullanıcı Takma Adı",
+      "user_alias_tooltip" : "Bu takma ad, kişilerinize gönderdiğiniz bağlantıları kişiselleştirmek için kullanılacaktır."
+    },
+    "tabs" : {
+      "links" : "Bağlantılar",
+      "my_info" : "Bilgilerim",
+      "settings" : "Ayarlar"
+    }
+  }
+}

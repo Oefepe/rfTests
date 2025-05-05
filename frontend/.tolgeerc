@@ -1,0 +1,7 @@
+{
+  "projectId": 3,
+  "apiUrl": "http://tolgee-global.apps.rapidfunnel.com",
+  "pull": {
+      "path": "./src/assets/i18n"
+    }
+}

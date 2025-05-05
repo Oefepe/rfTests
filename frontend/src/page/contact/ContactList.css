@@ -1,0 +1,22 @@
+.contact-name {
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px 5px 5px 5px;
+}
+
+.contact-list-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5%;
+}
+.contact-list-container {
+  padding: 10px;
+}
+.contact-list-container h4 {
+  text-align: center;
+}
+
+.MuiDataGrid-root .MuiDataGrid-main .MuiDataGrid-columnHeaders{
+  display: none;
+}
