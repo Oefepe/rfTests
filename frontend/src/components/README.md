@@ -1,1 +1,0 @@
-We can write our component here.

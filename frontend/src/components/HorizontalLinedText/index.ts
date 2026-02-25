@@ -1,1 +1,0 @@
-export { HorizontalLinedText } from './HorizontalLinedText';
