@@ -1,0 +1,178 @@
+================================================================================
+contactFormv2.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Updated version of contactFormGdpr.js with stricter validation flags
+(window.VALIDATION_PASSED) and generic submit button selector.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<div class="form-container">
+  <div id="contactFormContainer"
+       data-campaign="YOUR_CAMPAIGN_ID"
+       data-label="YOUR_LABEL_ID"
+       data-redirect="https://example.com/thank-you">
+
+    <form>
+      <div class="form-group">
+        <label for="contactFirstName">First Name *</label>
+        <input type="text" id="contactFirstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactLastName">Last Name *</label>
+        <input type="text" id="contactLastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Email *</label>
+        <input type="email" id="contactEmail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactPhone">Phone *</label>
+        <input type="tel" id="contactPhone" required>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="gdprConsent" required>
+          I consent to the processing of my personal data *
+        </label>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="marketingConsent">
+          I want to receive marketing communications (optional)
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: #0052CC;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+================================================================================
+KEY DIFFERENCES FROM contactFormGdpr.js:
+================================================================================
+
+1. Part 1 listens on FORM SUBMIT, not button click
+2. Requires .form-container wrapper around #contactFormContainer
+3. Submit button does NOT need an ID — any button[type="submit"] works
+4. Sets TWO validation flags: window.validationComplete AND window.VALIDATION_PASSED
+5. GDPR checkboxes are NOT cleared after successful submission (unlike v1)
+
+================================================================================
+DATA ATTRIBUTES:
+================================================================================
+
+#contactFormContainer:
+  - data-campaign: Campaign ID (required)
+  - data-label: Label/tag ID (optional)
+  - data-redirect: Redirect URL after submission (optional)
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+  - resourceId
+
+Example: ?userId=123&resourceId=456
+
+================================================================================
+TWO-PART FLOW:
+================================================================================
+
+Part 1 (Validation):
+  - Listens for form submit event
+  - Validates all fields + GDPR consent
+  - Sets window.validationComplete = true
+  - Sets window.VALIDATION_PASSED = true
+  - Calls Part 2
+
+Part 2 (Contact Creation):
+  - Checks BOTH validation flags before proceeding
+  - Finds submit button generically (no ID required)
+  - Submits to API
+  - On success: redirects or clears form (GDPR checkboxes NOT cleared)
+
+================================================================================
+NOTES:
+================================================================================
+
+- This version is more flexible with button selectors
+- Stricter validation gating with dual flags
+- Form preserves GDPR consent state after successful submission
+- Button text changes to "Submitting..." during API call

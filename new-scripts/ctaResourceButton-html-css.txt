@@ -1,0 +1,170 @@
+================================================================================
+ctaResourceButton.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Handles CTA buttons that link to RapidFunnel resources. Dynamically resolves
+the resource URL from the API on page load, then sends tracking email before
+redirecting on click.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Resource button (href will be set dynamically by script) -->
+<a id="ctaResourceButton1"
+   data-cta-resource-id="123"
+   data-cta-res-location="Hero Section"
+   href="#"
+   class="resource-button">
+  View Resource
+</a>
+
+<!-- Multiple resource buttons -->
+<a id="ctaResourceButton1"
+   data-cta-resource-id="456"
+   data-cta-res-location="Sidebar Widget"
+   href="#"
+   class="resource-button">
+  Download PDF
+</a>
+
+<a id="ctaResourceButton2"
+   data-cta-resource-id="789"
+   data-cta-res-location="Footer CTA"
+   href="#"
+   target="_blank"
+   class="resource-button">
+  Watch Video
+</a>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+.resource-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #6554C0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.resource-button:hover {
+  background: #8777D9;
+  transform: translateY(-2px);
+}
+
+.resource-button:active {
+  transform: translateY(0);
+}
+
+.resource-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+================================================================================
+ID NAMING CONVENTION:
+================================================================================
+
+MUST start with: ctaResourceButton
+Examples:
+  ✅ ctaResourceButton1
+  ✅ ctaResourceButton2
+  ✅ ctaResourceButtonPDF
+  ❌ resourceButton1  (incorrect)
+  ❌ ctaButton1      (incorrect)
+
+================================================================================
+ATTRIBUTES:
+================================================================================
+
+Required:
+  - id: Must start with "ctaResourceButton"
+  - data-cta-resource-id: The RapidFunnel resource ID to fetch
+  - href: Set to "#" initially (script will update it)
+
+Recommended:
+  - data-cta-res-location: Button location/context (used in tracking email)
+  - target: "_blank" to open in new tab (optional)
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+
+Optional:
+  - contactId
+
+Example: ?userId=123&contactId=456
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+Phase 1 - Page Load (href resolution):
+  1. Script finds all elements with ID starting with "ctaResourceButton"
+  2. For each button, reads data-cta-resource-id
+  3. Calls GET /api/api/resources/resource-details/ with:
+     - userId (from URL)
+     - resourceId (from data attribute)
+     - contactId (from URL, optional)
+  4. Receives resourceUrl from API
+  5. Constructs final URL: {resourceUrl}/{userId}/{contactId}
+  6. Sets button's href attribute
+  7. If API fails, button is disabled
+
+Phase 2 - Click (tracking + redirect):
+  1. User clicks button
+  2. If contactId exists:
+     - Fetches contact details
+     - Sends tracking email (send-cta-email endpoint)
+  3. Redirects to resolved href
+
+================================================================================
+EMAIL NOTIFICATION:
+================================================================================
+
+If contactId is present, sends email with:
+  - Contact First Name
+  - Contact Last Name
+  - Contact Phone
+  - Contact Email
+  - CTA Location (from data-cta-res-location)
+  - Page Name (from document.title)
+
+================================================================================
+BUTTON STATES:
+================================================================================
+
+Initial State:
+  - href="#"
+  - Loading resource URL...
+
+After Successful API Call:
+  - href="https://resource.url/userId/contactId"
+  - Button is clickable
+
+After Failed API Call:
+  - href="#"
+  - .disabled class added
+  - Button is not clickable
+
+================================================================================
+NOTES:
+================================================================================
+
+- Button hrefs are resolved asynchronously on page load
+- If API fails, button is disabled (prevents broken links)
+- Click deduplication prevents double-clicks
+- Email is optional (only if contactId exists)
+- Redirect happens regardless of email success

@@ -1,0 +1,138 @@
+================================================================================
+ctaButton.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Intercepts CTA button clicks, sends notification emails to the user with
+contact details, then redirects the visitor to the button's linked URL.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Single CTA button -->
+<a id="ctaButton1"
+   href="https://example.com/landing-page"
+   target="_blank"
+   data-description="Hero CTA Button"
+   class="cta-button">
+  Get Started
+</a>
+
+<!-- Multiple CTA buttons on same page -->
+<a id="ctaButton1"
+   href="https://example.com/demo"
+   data-description="Request Demo"
+   class="cta-button">
+  Request Demo
+</a>
+
+<a id="ctaButton2"
+   href="https://example.com/pricing"
+   data-description="View Pricing"
+   class="cta-button">
+  View Pricing
+</a>
+
+<a id="ctaButton3"
+   href="https://example.com/contact"
+   target="_blank"
+   data-description="Contact Sales"
+   class="cta-button">
+  Contact Sales
+</a>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #0052CC;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #0065FF;
+  transform: translateY(-2px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+================================================================================
+ID NAMING CONVENTION:
+================================================================================
+
+MUST start with: ctaButton
+Examples:
+  ✅ ctaButton1
+  ✅ ctaButton2
+  ✅ ctaButtonHero
+  ✅ ctaButtonPricing
+  ❌ cta-button-1   (incorrect)
+  ❌ myButton       (incorrect)
+
+================================================================================
+ATTRIBUTES:
+================================================================================
+
+Required:
+  - id: Must start with "ctaButton"
+  - href: Destination URL after tracking
+
+Recommended:
+  - data-description: Button location/purpose (used in email notification)
+  - target: "_blank" to open in new tab (optional)
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+
+Optional:
+  - contactId (if present, sends personalized email with contact details)
+
+Example: ?userId=123&contactId=456
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+1. User clicks CTA button
+2. If contactId exists in URL:
+   - Script fetches contact details from API
+   - Sends notification email to the user (via send-cta-email endpoint)
+   - Email includes: contact name, phone, email, button location, page name
+3. Redirects to button's href (regardless of email success)
+4. Opens in new tab if target="_blank"
+
+================================================================================
+EMAIL NOTIFICATION CONTENTS:
+================================================================================
+
+The user receives an email with:
+  - Contact First Name
+  - Contact Last Name
+  - Contact Phone Number
+  - Contact Email
+  - CTA Location (from data-description)
+  - Page Name (from meta tags or document.title)
+
+================================================================================
+NOTES:
+================================================================================
+
+- Multiple buttons can exist on the same page (use unique IDs)
+- Email is sent asynchronously — redirect happens regardless of email status
+- If no contactId in URL, button redirects without sending email
+- Click deduplication prevents accidental double-clicks

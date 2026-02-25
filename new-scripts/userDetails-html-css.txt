@@ -1,0 +1,239 @@
+================================================================================
+userDetails.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Fetches the assigned user's profile data and populates page elements
+dynamically. Central script for personalizing resource pages with user info,
+profile photos, contact details, booking links, and social media links.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Profile image (multiple variants supported) -->
+<img id="profileImage" src="" alt="Profile Photo">
+<img id="profileImage2" src="" alt="Profile Photo Small">
+
+<!-- Basic user info -->
+<h1>Hi, I'm <span id="firstName"></span> <span id="lastName"></span></h1>
+<p class="firstName"></p>  <!-- Alternative: class-based -->
+<p class="lastName"></p>
+
+<!-- Contact details -->
+<a id="email" href="#"></a>
+<a id="phoneNumber" href="#"></a>
+
+<!-- Custom booking link -->
+<a id="customBookingLink" href="#">
+  <span>Book a Meeting</span>
+</a>
+<!-- Alternative booking link (also updated) -->
+<a class="custom_custombookinglink" href="#">Schedule Time</a>
+<span class="alternate-text">Booking link not available</span>
+
+<!-- Social media links -->
+<div class="footer-social-links">
+  <a id="facebookUrl" href="#" target="_blank">
+    <span>Facebook</span>
+  </a>
+  <a id="twitterUrl" href="#" target="_blank">
+    <span>Twitter</span>
+  </a>
+  <a id="linkedinUrl" href="#" target="_blank">
+    <span>LinkedIn</span>
+  </a>
+  <a id="instagramUrl" href="#" target="_blank">
+    <span>Instagram</span>
+  </a>
+</div>
+
+<!-- Other user data fields (all optional) -->
+<p id="company"></p>
+<p id="title"></p>
+<p id="bio"></p>
+<p id="website"></p>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+#profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+#email, #phoneNumber {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0052CC;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#email:hover, #phoneNumber:hover {
+  text-decoration: underline;
+}
+
+#customBookingLink {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00875A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#customBookingLink:hover {
+  background: #00A86B;
+}
+
+.alternate-text {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.footer-social-links a:hover {
+  background: #0052CC;
+  color: #fff;
+}
+
+.footer-social-links a span {
+  /* Hide text, show icon only */
+  font-size: 0;
+}
+
+================================================================================
+ID MAPPING (element ID = API field name):
+================================================================================
+
+Profile Images (prefix matching):
+  #profileImage, #profileImage2, etc. → userData.profileImage
+
+Basic Fields:
+  #firstName      → userData.firstName
+  #lastName       → userData.lastName
+  #email          → userData.email (sets href="mailto:..." + text)
+  #phoneNumber    → userData.phoneNumber (sets href="tel:..." + text)
+
+Booking:
+  #customBookingLink → userData.customBookingLink (sets href)
+
+Social Media:
+  #facebookUrl   → userData.facebookUrl
+  #twitterUrl    → userData.twitterUrl
+  #linkedinUrl   → userData.linkedinUrl
+  #instagramUrl  → userData.instagramUrl
+  #youtubeUrl    → userData.youtubeUrl
+  #githubUrl     → userData.githubUrl
+
+Other Fields (any field from API):
+  #company       → userData.company
+  #title         → userData.title
+  #bio           → userData.bio
+  #website       → userData.website
+  ... (any field returned by the API)
+
+================================================================================
+SPECIAL BEHAVIORS:
+================================================================================
+
+Profile Images:
+  - All elements with ID starting with "profileImage" are updated
+  - Falls back to default avatar if empty:
+    https://rfres.com/assets/img/icon-user-default.png
+
+Email:
+  - Sets href="mailto:{email}"
+  - Sets text content to email address
+
+Phone Number:
+  - Sets href="tel:{phone}"
+  - Sets text content to phone number
+  - If empty, hides parent element
+
+Custom Booking Link:
+  - Sets href on #customBookingLink and .custom_custombookinglink
+  - Clears <span> text inside links
+  - Hides .alternate-text if link exists
+  - Stores value in window.sharedData.customBookingLink
+  - Fires 'customBookingLinkUpdated' event for other scripts
+  - If empty, hides booking links
+
+Social Links:
+  - Only shown if corresponding URL exists in user data
+  - Hidden automatically if field is empty
+  - Clears <span> text inside links (for icon-only display)
+
+================================================================================
+CUSTOM EVENT FIRED:
+================================================================================
+
+Event: 'customBookingLinkUpdated'
+Fired on: document
+When: After customBookingLink is set
+Consumed by: bookMe.js, videoScript.js
+
+================================================================================
+GLOBAL DATA STORED:
+================================================================================
+
+window.sharedData.customBookingLink = userData.customBookingLink
+
+This allows other scripts to access the booking link.
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+
+Example: ?userId=123
+
+================================================================================
+FONT AWESOME ICON SUPPRESSION:
+================================================================================
+
+The script automatically suppresses Font Awesome pseudo-content for:
+  - span.fa.fa-envelope.fa-lg::before
+  - span.fa.fa-phone.fa-lg::before
+
+This prevents duplicate icons when using Font Awesome with text labels.
+
+================================================================================
+NOTES:
+================================================================================
+
+- Any field returned by the API can be displayed by creating an element
+  with a matching ID
+- If a field is empty or null, the element is not updated
+- Social links without values are automatically hidden
+- Phone number's parent element is hidden if phone is empty
+- Profile images have a fallback to a default avatar
+- The script is defensive — missing elements won't cause errors

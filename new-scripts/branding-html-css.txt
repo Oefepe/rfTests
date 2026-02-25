@@ -1,0 +1,66 @@
+================================================================================
+branding.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Fetches user branding settings and applies custom colors to page elements.
+Also controls "Powered by RF" logo visibility.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Apply branding classes to any elements you want to brand -->
+<div class="rf_primaryColor">Primary color background</div>
+<div class="rf_primaryColorOff">Primary offset color</div>
+<div class="rf_secondaryColor">Secondary color background</div>
+<div class="rf_secondaryColorOff">Secondary offset color</div>
+<div class="rf_tertiaryColor">Tertiary color background</div>
+<div class="rf_tertiaryColorOff">Tertiary offset color</div>
+
+<!-- Optional: Powered by RF logo -->
+<div id="pbrf_logo">
+  <img src="path/to/rf-logo.png" alt="Powered by RapidFunnel">
+</div>
+
+================================================================================
+CSS CLASSES USED:
+================================================================================
+
+.rf_primaryColor       → User's primary brand color
+.rf_primaryColorOff    → Primary color offset/variant
+.rf_secondaryColor     → User's secondary brand color
+.rf_secondaryColorOff  → Secondary color offset/variant
+.rf_tertiaryColor      → User's tertiary brand color
+.rf_tertiaryColorOff   → Tertiary color offset/variant
+
+Note: The script sets the 'background' CSS property on these elements.
+
+================================================================================
+EXAMPLE USAGE:
+================================================================================
+
+<!-- Hero section with branded background -->
+<section class="rf_primaryColor hero-section">
+  <h1>Welcome to Our Site</h1>
+  <button class="rf_secondaryColor">Get Started</button>
+</section>
+
+<!-- Sidebar with accent colors -->
+<aside class="rf_primaryColorOff sidebar">
+  <div class="rf_tertiaryColor widget">...</div>
+</aside>
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required: ?userId=123
+
+================================================================================
+NOTES:
+================================================================================
+
+- Colors are fetched from the RapidFunnel branding API
+- The script applies inline background styles to override any CSS defaults
+- #pbrf_logo is shown by default; hidden if user setting is enabled

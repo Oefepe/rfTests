@@ -1,0 +1,151 @@
+================================================================================
+ctaConversion.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Similar to ctaButton.js but uses the conversion-specific email endpoint.
+ALWAYS sends an email notification (even without contactId), making it ideal
+for tracking critical conversion actions.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Conversion tracking button -->
+<a id="ctaConversionButton1"
+   href="https://example.com/download/ebook.pdf"
+   data-description="Downloaded Ebook"
+   class="conversion-button">
+  Download Ebook
+</a>
+
+<!-- Multiple conversion buttons -->
+<a id="ctaConversionButton1"
+   href="https://example.com/whitepaper.pdf"
+   data-description="Whitepaper Download"
+   class="conversion-button">
+  Get Whitepaper
+</a>
+
+<a id="ctaConversionButton2"
+   href="https://example.com/trial"
+   target="_blank"
+   data-description="Free Trial Signup"
+   class="conversion-button">
+  Start Free Trial
+</a>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+.conversion-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #00875A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.conversion-button:hover {
+  background: #00A86B;
+  transform: translateY(-2px);
+}
+
+.conversion-button:active {
+  transform: translateY(0);
+}
+
+================================================================================
+ID NAMING CONVENTION:
+================================================================================
+
+MUST start with: ctaConversionButton
+Examples:
+  ✅ ctaConversionButton1
+  ✅ ctaConversionButton2
+  ✅ ctaConversionButtonDownload
+  ❌ conversionButton1  (incorrect)
+  ❌ ctaButton1         (incorrect)
+
+================================================================================
+ATTRIBUTES:
+================================================================================
+
+Required:
+  - id: Must start with "ctaConversionButton"
+  - href: Destination URL after tracking
+
+Recommended:
+  - data-description: Conversion action description (used in email)
+  - target: "_blank" to open in new tab (optional)
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+
+Optional:
+  - contactId
+
+Example: ?userId=123&contactId=456
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+1. User clicks conversion button
+2. Script attempts to fetch contact details if contactId exists
+3. ALWAYS sends conversion email (one of three scenarios):
+
+   Scenario A (contactId exists and API succeeds):
+     - Sends email with real contact data
+
+   Scenario B (contactId exists but API fails):
+     - Sends email with placeholder: "System failed to answer"
+
+   Scenario C (no contactId in URL):
+     - Sends email with placeholder: "No contact ID found"
+
+4. Redirects to button's href after email attempt
+
+================================================================================
+EMAIL NOTIFICATION:
+================================================================================
+
+Uses endpoint: send-cta-conversion-email
+
+Includes:
+  - Contact First Name (or placeholder)
+  - Contact Last Name (or placeholder)
+  - Contact Phone (or "N/A")
+  - Contact Email (or "N/A")
+  - CTA Location (from data-description)
+  - Page Name (from document.title)
+  - Contact ID
+
+================================================================================
+DIFFERENCES FROM ctaButton.js:
+================================================================================
+
+Feature                    | ctaButton.js              | ctaConversion.js
+---------------------------|---------------------------|---------------------------
+Email endpoint             | send-cta-email            | send-cta-conversion-email
+Sends email without contactId | No                     | Yes (with placeholder)
+Sends email on API failure | No                        | Yes (with placeholder)
+Use case                   | General CTA tracking      | Critical conversion tracking
+
+================================================================================
+NOTES:
+================================================================================
+
+- Use this script for high-value conversion actions (downloads, signups, etc.)
+- Email is ALWAYS sent, ensuring you never miss a conversion
+- Click deduplication prevents accidental double submissions
+- Redirect happens regardless of email success or failure

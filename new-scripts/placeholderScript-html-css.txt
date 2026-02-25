@@ -1,0 +1,106 @@
+================================================================================
+placeholderScript.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+A utility script that replaces URL placeholder tokens in ALL links on the page.
+Useful for static pages that need dynamic user/contact IDs injected at runtime.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Links with placeholders (will be replaced automatically) -->
+<a href="https://example.com/dashboard?user=[user-id]">
+  My Dashboard
+</a>
+
+<a href="https://example.com/profile?userId=[userId]&contact=[contactId]">
+  View Profile
+</a>
+
+<a href="/resources/video/[user-id]/[contactId]">
+  Watch Video
+</a>
+
+<!-- Navigation menu example -->
+<nav>
+  <a href="/home?userId=[userId]">Home</a>
+  <a href="/settings?userId=[userId]">Settings</a>
+  <a href="/contacts?userId=[userId]&contactId=[contactId]">Contacts</a>
+</nav>
+
+================================================================================
+SUPPORTED PLACEHOLDERS:
+================================================================================
+
+[user-id]   → Replaced with userId from URL
+[userId]    → Replaced with userId from URL
+[contactId] → Replaced with contactId from URL
+
+If the parameter is missing from the URL, the placeholder is replaced with an
+empty string.
+
+================================================================================
+BEFORE/AFTER EXAMPLE:
+================================================================================
+
+Before script runs:
+  <a href="https://example.com/page?u=[user-id]&c=[contactId]">Link</a>
+
+After script runs (with ?userId=123&contactId=456):
+  <a href="https://example.com/page?u=123&c=456">Link</a>
+
+After script runs (with ?userId=123 only):
+  <a href="https://example.com/page?u=123&c=">Link</a>
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Optional (any combination):
+  - userId
+  - contactId
+
+Example: ?userId=123&contactId=456
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+1. Script reads userId and contactId from current page URL
+2. Finds all <a> elements with href attributes
+3. For each link, replaces all instances of:
+   - [user-id] with userId value
+   - [userId] with userId value
+   - [contactId] with contactId value
+4. Updates the href attribute
+5. Logs total number of links updated
+
+================================================================================
+NO CSS REQUIRED
+================================================================================
+
+This is a utility script that only modifies href attributes.
+No CSS is needed.
+
+================================================================================
+USE CASES:
+================================================================================
+
+✅ Navigation menus with dynamic user links
+✅ Footer links that need to preserve user context
+✅ Resource download links that need tracking parameters
+✅ Multi-step flows where user/contact IDs must persist
+✅ Static Webflow pages that can't use server-side rendering
+
+================================================================================
+NOTES:
+================================================================================
+
+- Works on ALL <a> tags on the page automatically
+- Runs once on DOM ready
+- Safe to use alongside other scripts
+- Does not modify hrefs that don't contain placeholders
+- Uses global replace (all instances of each placeholder are replaced)
+- If a URL parameter is missing, placeholder becomes empty string

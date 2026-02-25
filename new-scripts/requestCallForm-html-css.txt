@@ -1,0 +1,217 @@
+================================================================================
+requestCallForm.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Handles a "Request a Call" interaction. Displays either a button (for known
+contacts) or a form (for anonymous visitors), and sends email notifications.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<!-- Button mode (shown when contactId exists) -->
+<button id="requestCallBtn" class="request-call-btn">
+  Request a Call
+</button>
+
+<!-- Form mode (shown when contactId does NOT exist) -->
+<div id="requestCallForm" class="request-call-form">
+  <div id="requestForm">
+    <form>
+      <div class="form-group">
+        <label for="contactFirstNameRequestForm">First Name *</label>
+        <input type="text" id="contactFirstNameRequestForm" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactLastNameRequestForm">Last Name *</label>
+        <input type="text" id="contactLastNameRequestForm" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contactPhoneRequestForm">Phone Number *</label>
+        <input type="tel" id="contactPhoneRequestForm" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Request Call</button>
+    </form>
+
+    <!-- Success message (shown after successful submission) -->
+    <div class="w-form-done" style="display:none;">
+      <p>Thank you! We'll call you shortly.</p>
+    </div>
+
+    <!-- Error message (shown on submission failure) -->
+    <div class="w-form-fail" style="display:none;">
+      <p>Oops! Something went wrong. Please try again.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Required: Define source page description as global variable -->
+<script>
+  var resourceDescriptionForRequestCall = 'Product Landing Page';
+</script>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+.request-call-btn {
+  padding: 14px 28px;
+  background: #FF5630;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.request-call-btn:hover {
+  background: #FF7452;
+  transform: translateY(-2px);
+}
+
+.request-call-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.request-call-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.request-call-form .form-group {
+  margin-bottom: 16px;
+}
+
+.request-call-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.request-call-form input[type="text"],
+.request-call-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.request-call-form .btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: #FF5630;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.request-call-form .btn-submit:hover {
+  background: #FF7452;
+}
+
+.w-form-done {
+  padding: 16px;
+  background: #E3FCEF;
+  border: 1px solid #00875A;
+  border-radius: 4px;
+  color: #00875A;
+  margin-top: 16px;
+}
+
+.w-form-fail {
+  padding: 16px;
+  background: #FFEBE6;
+  border: 1px solid #FF5630;
+  border-radius: 4px;
+  color: #BF2600;
+  margin-top: 16px;
+}
+
+================================================================================
+URL PARAMETERS:
+================================================================================
+
+Required:
+  - userId
+
+Optional:
+  - contactId (determines which mode is shown)
+
+Example (button mode): ?userId=123&contactId=456
+Example (form mode):   ?userId=123
+
+================================================================================
+DISPLAY LOGIC:
+================================================================================
+
+If contactId is present in URL:
+  - Show: #requestCallBtn (button)
+  - Hide: #requestCallForm (form)
+
+If contactId is NOT in URL:
+  - Show: #requestCallForm (form)
+  - Hide: #requestCallBtn (button)
+
+================================================================================
+GLOBAL VARIABLE REQUIRED:
+================================================================================
+
+var resourceDescriptionForRequestCall = 'Your Page Name';
+
+This is included in the email notification to identify the source page.
+If not defined, document.title is used as fallback.
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+Button Mode (known contact):
+  1. User clicks "Request a Call" button
+  2. Script fetches contact details via API
+  3. Sends email with contact's name and phone number
+  4. Button is re-enabled after email is sent
+
+Form Mode (anonymous visitor):
+  1. User fills in First Name, Last Name, Phone
+  2. User submits form
+  3. Script validates required fields
+  4. Sends email with submitted information
+  5. Shows success or error message
+
+================================================================================
+EMAIL NOTIFICATION:
+================================================================================
+
+Endpoint: send-request-call-email
+
+Includes:
+  - User ID (legacy)
+  - Contact First Name
+  - Contact Last Name
+  - Contact Phone Number
+  - Request Call Source Page (from resourceDescriptionForRequestCall)
+
+================================================================================
+NOTES:
+================================================================================
+
+- Prevents double submission with isSubmitting flag
+- Form validation ensures all fields are filled before submission
+- Success/error messages use Webflow's .w-form-done/.w-form-fail classes
+- Button is disabled during submission to prevent double-clicks

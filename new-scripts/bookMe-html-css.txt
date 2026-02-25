@@ -1,0 +1,51 @@
+================================================================================
+bookMe.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+Controls visibility of a "Book Me" button based on whether a valid booking
+link has been loaded by userDetails.js.
+
+================================================================================
+REQUIRED HTML:
+================================================================================
+
+<a id="bookMeBtn" href="#" class="btn-primary">
+  Book a Meeting
+</a>
+
+================================================================================
+REQUIRED CSS:
+================================================================================
+
+/* Optional - Style the button as needed */
+#bookMeBtn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0052CC;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+
+#bookMeBtn:hover {
+  opacity: 0.9;
+}
+
+================================================================================
+HOW IT WORKS:
+================================================================================
+
+1. The button is hidden on page load
+2. userDetails.js fetches the user's customBookingLink and fires a
+   'customBookingLinkUpdated' event
+3. If a valid booking link exists (not # or empty), the button is shown
+4. The href is dynamically set by userDetails.js
+
+================================================================================
+DEPENDENCIES:
+================================================================================
+
+- userDetails.js must be loaded on the same page
+- userId URL parameter required

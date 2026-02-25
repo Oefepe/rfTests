@@ -1,0 +1,27 @@
+================================================================================
+analyticsDetails.js - HTML + CSS Requirements
+================================================================================
+
+DESCRIPTION:
+This script automatically injects Google Analytics, Facebook Pixel, and Google
+Tag Manager based on user settings. No HTML markup is required.
+
+================================================================================
+REQUIREMENTS:
+================================================================================
+
+✅ URL Parameter Required:
+   - userId (e.g., ?userId=123)
+
+✅ No HTML elements required
+✅ No CSS required
+✅ No data attributes required
+
+================================================================================
+NOTES:
+================================================================================
+
+- The script fetches tracking codes from the RapidFunnel API and injects them
+  automatically into the <head> element.
+- Deduplication prevents the same tracking code from being injected twice.
+- All tracking scripts are loaded asynchronously for optimal performance.

@@ -1,0 +1,24 @@
+<!-- RF Scripts v1 (New/Improved) - Embed these in your Webflow page -->
+
+<!-- Core Scripts -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/analyticsDetails.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/branding.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/userDetails.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/placeholderScript.js"></script>
+
+<!-- Contact Forms (choose one based on your implementation) -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/contactForm.js"></script>
+<!-- OR -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/contactFormGdpr.js"></script>
+<!-- OR -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/contactFormv2.js"></script>
+
+<!-- CTA Buttons (use all that apply to your page) -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/ctaButton.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/ctaConversion.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/ctaResourceButton.js"></script>
+
+<!-- Optional Components -->
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/bookMe.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/requestCallForm.js"></script>
+<script src="https://raw.githubusercontent.com/Oefepe/rfTests/refs/heads/main/new-scripts/videoScript.js"></script>
