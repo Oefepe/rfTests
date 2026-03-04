@@ -37,6 +37,29 @@
         return;
       }
 
+      // ── Booking link (handle BEFORE element existence check!) ───────────
+      if (key === 'customBookingLink') {
+        // ALWAYS store globally, regardless of element existence
+        if (value && value.trim() !== '') {
+          window.sharedData = window.sharedData || {};
+          window.sharedData.customBookingLink = value;
+
+          // Update #customBookingLink element if it exists
+          var $customLink = $('#customBookingLink');
+          if ($customLink.length) {
+            $customLink.attr('href', value).find('span').text('');
+          }
+
+          $('.alternate-text').hide();
+
+          // Notify other scripts (bookMe.js)
+          $(document).trigger('customBookingLinkUpdated');
+        } else {
+          $('#customBookingLink').hide();
+        }
+        return;
+      }
+
       var $el = $('#' + key);
       if (!$el.length) return;
 
@@ -54,29 +77,6 @@
           $el.attr('href', 'tel:' + value).text(value);
         } else {
           $el.parent().hide();
-        }
-        return;
-      }
-
-      // ── Booking link ─────────────────────────────────────────────────────
-      if (key === 'customBookingLink') {
-        if (value && value.trim() !== '') {
-          $el.attr('href', value);
-          $el.find('span').text('');
-          $('.custom_custombookinglink').attr('href', value).find('span').text('');
-          $('.alternate-text').hide();
-
-          // Store globally for cross-script access
-          window.sharedData = window.sharedData || {};
-          window.sharedData.customBookingLink = value;
-
-          // Notify other scripts (bookMe.js, videoScript.js)
-          $(document).trigger('customBookingLinkUpdated');
-          console.log(LOG, 'Booking link set and event fired.');
-        } else {
-          $el.hide();
-          $('.custom_custombookinglink').hide();
-          console.log(LOG, 'No booking link — element hidden.');
         }
         return;
       }

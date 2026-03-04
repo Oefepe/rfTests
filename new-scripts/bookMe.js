@@ -2,37 +2,88 @@
   'use strict';
 
   var LOG = '[BookMe]';
+  var checkCount = 0;
+  var maxChecks = 20;
+  var checkInterval = 500;
+  var pollTimer = null;
+  var foundBookingLink = false;
 
   $(function () {
-    var $btn = $('#bookMeBtn');
+    var $btn = $('#customBookingLink');
 
     if (!$btn.length) {
-      console.warn(LOG, '#bookMeBtn not found on page — script skipped.');
+      console.warn(LOG, '#customBookingLink not found on page');
       return;
     }
 
-    // Hide on load; visibility is determined by booking link availability
+    // Initially hide the button
     $btn.hide();
 
-    function checkAndShowButton() {
+    function getBookingLink() {
+      // Check window.sharedData (set by userDetails.js)
+      if (window.sharedData && window.sharedData.customBookingLink) {
+        var link = window.sharedData.customBookingLink;
+        if (link && link !== '#' && link.trim() !== '') {
+          return link;
+        }
+      }
+
+      // Check href attribute on the button itself
       var href = $btn.attr('href');
-      if (href && href.trim() !== '' && href.trim() !== '#') {
+      if (href && href !== '#' && href.trim() !== '') {
+        return href;
+      }
+
+      return null;
+    }
+
+    function checkAndShowButton() {
+      checkCount++;
+      var bookingLink = getBookingLink();
+
+      if (bookingLink) {
+        foundBookingLink = true;
+
+        // Stop polling once found
+        if (pollTimer) {
+          clearInterval(pollTimer);
+          pollTimer = null;
+        }
+
+        console.log(LOG, 'Booking link found, showing button');
         $btn.show();
-        console.log(LOG, 'Button shown with href:', href);
       } else {
         $btn.hide();
-        console.log(LOG, 'Button hidden — no valid href.');
       }
     }
 
-    // React to booking link being updated by userDetails.js
+    // Listen for the customBookingLinkUpdated event
     $(document).on('customBookingLinkUpdated', function () {
-      console.log(LOG, 'customBookingLinkUpdated event received.');
       checkAndShowButton();
     });
 
-    // Run initial check in case href is already set on load
+    // Run initial check
     checkAndShowButton();
+
+    // Start polling if not found yet
+    if (!foundBookingLink) {
+      pollTimer = setInterval(function() {
+        if (foundBookingLink) {
+          clearInterval(pollTimer);
+          pollTimer = null;
+          return;
+        }
+
+        if (checkCount >= maxChecks) {
+          clearInterval(pollTimer);
+          pollTimer = null;
+          console.warn(LOG, 'Booking link not found after polling');
+          return;
+        }
+
+        checkAndShowButton();
+      }, checkInterval);
+    }
   });
 
 }(jQuery));
