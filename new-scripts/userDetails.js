@@ -155,25 +155,25 @@
 
   // Safe initialization - works with dynamic script injection
   function safeInit() {
+    // First check if jQuery is available
+    if (typeof window.jQuery === 'undefined') {
+      console.warn(LOG, 'jQuery not loaded yet, waiting...');
+      setTimeout(safeInit, 50);
+      return;
+    }
+
+    // jQuery is available, now check DOM state
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
+      document.addEventListener('DOMContentLoaded', function() {
+        init();
+      });
     } else {
       // DOM already loaded, execute immediately
       init();
     }
   }
 
-  // Check if jQuery is available, otherwise wait for it
-  if (typeof jQuery !== 'undefined') {
-    safeInit();
-  } else {
-    // Wait for jQuery to load
-    var checkJQuery = setInterval(function() {
-      if (typeof jQuery !== 'undefined') {
-        clearInterval(checkJQuery);
-        safeInit();
-      }
-    }, 50);
-  }
+  // Start initialization
+  safeInit();
 
-}(typeof jQuery !== 'undefined' ? jQuery : null));
+}(window.jQuery));
