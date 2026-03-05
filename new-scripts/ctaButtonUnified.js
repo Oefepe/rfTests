@@ -58,7 +58,8 @@
         contactPhoneNumber:  contactData.phone        || '',
         contactEmail:        contactData.email        || '',
         ctaLocation:         buttonLocation,
-        ctaPageName:         getPageName()
+        ctaPageName:         getPageName(),
+        contactId:           params.contactId         || ''
       }),
       complete: function () {
         redirect(redirectUrl, target);
@@ -227,7 +228,7 @@
   // ============================================================================
   // Initialization
   // ============================================================================
-  $(function () {
+  function init() {
     var params = getUrlParams();
     var $buttons = $('[data-button-type]');
 
@@ -286,6 +287,29 @@
     });
 
     console.log(LOG, 'CTA button tracking initialized.');
-  });
+  }
 
-}(jQuery));
+  // Safe initialization - works with dynamic script injection
+  function safeInit() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      // DOM already loaded, execute immediately
+      init();
+    }
+  }
+
+  // Check if jQuery is available, otherwise wait for it
+  if (typeof jQuery !== 'undefined') {
+    safeInit();
+  } else {
+    // Wait for jQuery to load
+    var checkJQuery = setInterval(function() {
+      if (typeof jQuery !== 'undefined') {
+        clearInterval(checkJQuery);
+        safeInit();
+      }
+    }, 50);
+  }
+
+}(typeof jQuery !== 'undefined' ? jQuery : null));

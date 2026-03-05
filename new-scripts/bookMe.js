@@ -8,7 +8,7 @@
   var pollTimer = null;
   var foundBookingLink = false;
 
-  $(function () {
+  function init() {
     var $btn = $('#customBookingLink');
 
     if (!$btn.length) {
@@ -84,6 +84,29 @@
         checkAndShowButton();
       }, checkInterval);
     }
-  });
+  }
 
-}(jQuery));
+  // Safe initialization - works with dynamic script injection
+  function safeInit() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      // DOM already loaded, execute immediately
+      init();
+    }
+  }
+
+  // Check if jQuery is available, otherwise wait for it
+  if (typeof jQuery !== 'undefined') {
+    safeInit();
+  } else {
+    // Wait for jQuery to load
+    var checkJQuery = setInterval(function() {
+      if (typeof jQuery !== 'undefined') {
+        clearInterval(checkJQuery);
+        safeInit();
+      }
+    }, 50);
+  }
+
+}(typeof jQuery !== 'undefined' ? jQuery : null));
