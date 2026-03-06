@@ -1,4 +1,4 @@
-(function ($) {
+jQuery(function ($) {
   'use strict';
 
   var LOG = '[UserDetails]';
@@ -120,60 +120,33 @@
     }
   }
 
-  // Main initialization function
-  function init() {
-    var params = getUrlParams();
+  var params = getUrlParams();
 
-    if (!params.userId) {
-      console.warn(LOG, 'No userId in URL — user details skipped.');
-      return;
-    }
+  if (!params.userId) {
+    console.warn(LOG, 'No userId in URL — user details skipped.');
+    return;
+  }
 
-    suppressFontAwesomeIcons();
+  suppressFontAwesomeIcons();
 
-    $.ajax({
-      url: 'https://apiv2.rapidfunnel.com/v2/users-details/' + encodeURIComponent(params.userId),
-      type: 'GET',
-      dataType: 'json',
-      timeout: 8000,
-      success: function (response) {
-        if (!response || !response.data || !response.data[0]) {
-          console.warn(LOG, 'Empty or invalid user details response.');
-          return;
-        }
-        var userData = response.data[0];
-        console.log(LOG, 'User data received:', userData);
-        applyUserData(userData);
-      },
-      error: function (xhr, status, error) {
-        console.error(LOG, 'Failed to fetch user details — status:', status, '| error:', error);
+  $.ajax({
+    url: 'https://apiv2.rapidfunnel.com/v2/users-details/' + encodeURIComponent(params.userId),
+    type: 'GET',
+    dataType: 'json',
+    timeout: 8000,
+    success: function (response) {
+      if (!response || !response.data || !response.data[0]) {
+        console.warn(LOG, 'Empty or invalid user details response.');
+        return;
       }
-    });
-
-    console.log(LOG, 'User details initialized for userId:', params.userId);
-  }
-
-  // Safe initialization - works with dynamic script injection
-  function safeInit() {
-    // First check if jQuery is available
-    if (typeof window.jQuery === 'undefined') {
-      console.warn(LOG, 'jQuery not loaded yet, waiting...');
-      setTimeout(safeInit, 50);
-      return;
+      var userData = response.data[0];
+      console.log(LOG, 'User data received:', userData);
+      applyUserData(userData);
+    },
+    error: function (xhr, status, error) {
+      console.error(LOG, 'Failed to fetch user details — status:', status, '| error:', error);
     }
+  });
 
-    // jQuery is available, now check DOM state
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        init();
-      });
-    } else {
-      // DOM already loaded, execute immediately
-      init();
-    }
-  }
-
-  // Start initialization
-  safeInit();
-
-}(window.jQuery));
+  console.log(LOG, 'User details initialized for userId:', params.userId);
+});

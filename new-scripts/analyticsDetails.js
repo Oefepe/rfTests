@@ -1,4 +1,4 @@
-(function ($) {
+jQuery(function ($) {
   'use strict';
 
   var LOG = '[Analytics]';
@@ -82,64 +82,38 @@
     if (data.gtmTrackingCode)    injectGoogleTagManager(data.gtmTrackingCode);
   }
 
-  function init() {
-    var userId;
+  var userId;
 
-    try {
-      userId = new URL(window.location.href).searchParams.get('userId');
-    } catch (e) {
-      console.error(LOG, 'Could not parse current URL:', e);
-      return;
-    }
+  try {
+    userId = new URL(window.location.href).searchParams.get('userId');
+  } catch (e) {
+    console.error(LOG, 'Could not parse current URL:', e);
+    return;
+  }
 
-    if (!userId) {
-      console.log(LOG, 'No userId found in URL — analytics tracking skipped.');
-      return;
-    }
+  if (!userId) {
+    console.log(LOG, 'No userId found in URL — analytics tracking skipped.');
+    return;
+  }
 
-    console.log(LOG, 'Fetching analytics config for userId:', userId);
+  console.log(LOG, 'Fetching analytics config for userId:', userId);
 
-    $.ajax({
-      url: 'https://apiv2.rapidfunnel.com/v2/analytics/' + encodeURIComponent(userId),
-      type: 'GET',
-      dataType: 'json',
-      timeout: 8000,
-      success: function (response) {
-        if (!response || !response.data) {
-          console.warn(LOG, 'API returned empty or invalid data.');
-          return;
-        }
-        processTrackingCodes(response.data.userData);
-        processTrackingCodes(response.data.accountData);
-        console.log(LOG, 'Tracking initialization complete.');
-      },
-      error: function (xhr, status, error) {
-        console.error(LOG, 'Failed to fetch analytics config — status:', status, '| error:', error);
+  $.ajax({
+    url: 'https://apiv2.rapidfunnel.com/v2/analytics/' + encodeURIComponent(userId),
+    type: 'GET',
+    dataType: 'json',
+    timeout: 8000,
+    success: function (response) {
+      if (!response || !response.data) {
+        console.warn(LOG, 'API returned empty or invalid data.');
+        return;
       }
-    });
-  }
-
-  // Safe initialization - works with dynamic script injection
-  function safeInit() {
-    // First check if jQuery is available
-    if (typeof window.jQuery === 'undefined') {
-      console.warn(LOG, 'jQuery not loaded yet, waiting...');
-      setTimeout(safeInit, 50);
-      return;
+      processTrackingCodes(response.data.userData);
+      processTrackingCodes(response.data.accountData);
+      console.log(LOG, 'Tracking initialization complete.');
+    },
+    error: function (xhr, status, error) {
+      console.error(LOG, 'Failed to fetch analytics config — status:', status, '| error:', error);
     }
-
-    // jQuery is available, now check DOM state
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        init();
-      });
-    } else {
-      // DOM already loaded, execute immediately
-      init();
-    }
-  }
-
-  // Start initialization
-  safeInit();
-
-}(window.jQuery));
+  });
+});

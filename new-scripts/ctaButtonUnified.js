@@ -1,7 +1,14 @@
-(function ($) {
+jQuery(function ($) {
   'use strict';
 
   var LOG = '[CtaButtonUnified]';
+
+  // Constants
+  var BUTTON_TYPES = {
+    CTA: 'cta',
+    CONVERSION: 'conversion',
+    RESOURCE: 'resource'
+  };
 
   // ============================================================================
   // URL Parameters
@@ -20,16 +27,6 @@
   }
 
   // ============================================================================
-  // Page Name
-  // ============================================================================
-  function getPageName() {
-    return $('meta[name="page-name"]').attr('content') ||
-           $('meta[property="og:title"]').attr('content') ||
-           document.title ||
-           'Unknown Page';
-  }
-
-  // ============================================================================
   // Redirect
   // ============================================================================
   function redirect(url, target) {
@@ -39,6 +36,16 @@
     } else {
       window.location.href = url;
     }
+  }
+
+  // ============================================================================
+  // Page Name
+  // ============================================================================
+  function getPageName() {
+    return $('meta[name="page-name"]').attr('content') ||
+           $('meta[property="og:title"]').attr('content') ||
+           document.title ||
+           'Unknown Page';
   }
 
   // ============================================================================
@@ -94,6 +101,23 @@
   }
 
   // ============================================================================
+  // Shared Contact Fetching
+  // ============================================================================
+  function fetchContactData(contactId, onSuccess, onError) {
+    $.ajax({
+      url: 'https://apiv2.rapidfunnel.com/v2/contact-details/' + encodeURIComponent(contactId),
+      type: 'GET',
+      dataType: 'json',
+      timeout: 5000,
+      success: function (response) {
+        var contactData = (response && response.data) ? response.data : {};
+        onSuccess(contactData);
+      },
+      error: onError
+    });
+  }
+
+  // ============================================================================
   // Button Handlers by Type
   // ============================================================================
 
@@ -104,56 +128,39 @@
       return;
     }
 
-    $.ajax({
-      url: 'https://apiv2.rapidfunnel.com/v2/contact-details/' + encodeURIComponent(params.contactId),
-      type: 'GET',
-      dataType: 'json',
-      timeout: 5000,
-      success: function (response) {
-        var contactData = (response && response.data) ? response.data : {};
+    fetchContactData(
+      params.contactId,
+      function (contactData) {
         sendCtaEmail(params, contactData, buttonLocation, redirectUrl, target);
       },
-      error: function () {
+      function () {
         console.error(LOG, 'Failed to fetch contact details — redirecting anyway.');
         redirect(redirectUrl, target);
       }
-    });
+    );
   }
 
   // Conversion Button: Always send email (with fallback data if needed)
   function handleConversionButton($btn, params, buttonLocation, redirectUrl, target) {
+    var fallbackNoContact = { firstName: 'No contact ID found', lastName: '', phone: 'N/A', email: 'N/A' };
+    var fallbackApiError = { firstName: 'System failed to answer', lastName: '', phone: 'N/A', email: 'N/A' };
+
     if (!params.contactId) {
-      sendConversionEmail(
-        params,
-        { firstName: 'No contact ID found', lastName: '', phone: 'N/A', email: 'N/A' },
-        buttonLocation,
-        redirectUrl,
-        target
-      );
+      sendConversionEmail(params, fallbackNoContact, buttonLocation, redirectUrl, target);
       return;
     }
 
-    $.ajax({
-      url: 'https://apiv2.rapidfunnel.com/v2/contact-details/' + encodeURIComponent(params.contactId),
-      type: 'GET',
-      dataType: 'json',
-      timeout: 5000,
-      success: function (response) {
-        var contactData = (response && response.data) ? response.data :
-          { firstName: 'System failed to answer', lastName: '', phone: 'N/A', email: 'N/A' };
-        sendConversionEmail(params, contactData, buttonLocation, redirectUrl, target);
+    fetchContactData(
+      params.contactId,
+      function (contactData) {
+        var data = (contactData && contactData.firstName) ? contactData : fallbackApiError;
+        sendConversionEmail(params, data, buttonLocation, redirectUrl, target);
       },
-      error: function () {
+      function () {
         console.error(LOG, 'Failed to fetch contact details — sending fallback email.');
-        sendConversionEmail(
-          params,
-          { firstName: 'System failed to answer', lastName: '', phone: 'N/A', email: 'N/A' },
-          buttonLocation,
-          redirectUrl,
-          target
-        );
+        sendConversionEmail(params, fallbackApiError, buttonLocation, redirectUrl, target);
       }
-    });
+    );
   }
 
   // Resource Button: Send email only if contactId exists (same as CTA)
@@ -163,20 +170,16 @@
       return;
     }
 
-    $.ajax({
-      url: 'https://apiv2.rapidfunnel.com/v2/contact-details/' + encodeURIComponent(params.contactId),
-      type: 'GET',
-      dataType: 'json',
-      timeout: 5000,
-      success: function (response) {
-        var contactData = (response && response.data) ? response.data : {};
+    fetchContactData(
+      params.contactId,
+      function (contactData) {
         sendCtaEmail(params, contactData, buttonLocation, redirectUrl, target);
       },
-      error: function () {
+      function () {
         console.error(LOG, 'Failed to fetch contact details — redirecting anyway.');
         redirect(redirectUrl, target);
       }
-    });
+    );
   }
 
   // ============================================================================
@@ -228,88 +231,62 @@
   // ============================================================================
   // Initialization
   // ============================================================================
-  function init() {
-    var params = getUrlParams();
-    var $buttons = $('[data-button-type]');
+  var params = getUrlParams();
+  var $buttons = $('[data-button-type]');
 
-    if (!$buttons.length) {
-      console.warn(LOG, 'No CTA buttons found with data-button-type attribute.');
-      return;
-    }
-
-    console.log(LOG, 'Found', $buttons.length, 'button(s).');
-
-    // Resolve resource button hrefs on page load
-    $buttons.filter('[data-button-type="resource"]').each(function () {
-      updateResourceButtonHref($(this), params);
-    });
-
-    var isProcessing = false;
-
-    // Handle clicks
-    $buttons.on('click', function (e) {
-      e.preventDefault();
-
-      if (isProcessing) {
-        console.warn(LOG, 'Click already being processed.');
-        return;
-      }
-
-      var $btn = $(this);
-
-      // Check if resource button is disabled
-      if ($btn.hasClass('disabled')) {
-        console.warn(LOG, 'Button is disabled — click ignored.');
-        return;
-      }
-
-      isProcessing = true;
-
-      var buttonType     = $btn.attr('data-button-type') || 'cta';
-      var buttonLocation = $btn.attr('data-location') || $btn.attr('id') || '';
-      var redirectUrl    = $btn.attr('href') || '';
-      var target         = $btn.attr('target') || '_self';
-
-      console.log(LOG, 'Clicked:', $btn.attr('id'), '(type:', buttonType + ')');
-
-      // Route to appropriate handler
-      if (buttonType === 'conversion') {
-        handleConversionButton($btn, params, buttonLocation, redirectUrl, target);
-      } else if (buttonType === 'resource') {
-        handleResourceButton($btn, params, buttonLocation, redirectUrl, target);
-      } else {
-        // Default to CTA behavior
-        handleCtaButton($btn, params, buttonLocation, redirectUrl, target);
-      }
-
-      // Reset processing flag after delay to allow redirect
-      setTimeout(function () { isProcessing = false; }, 3000);
-    });
-
-    console.log(LOG, 'CTA button tracking initialized.');
+  if (!$buttons.length) {
+    console.warn(LOG, 'No CTA buttons found with data-button-type attribute.');
+    return;
   }
 
-  // Safe initialization - works with dynamic script injection
-  function safeInit() {
-    // First check if jQuery is available
-    if (typeof window.jQuery === 'undefined') {
-      console.warn(LOG, 'jQuery not loaded yet, waiting...');
-      setTimeout(safeInit, 50);
+  console.log(LOG, 'Found', $buttons.length, 'button(s).');
+
+  // Resolve resource button hrefs on page load
+  $buttons.filter('[data-button-type="' + BUTTON_TYPES.RESOURCE + '"]').each(function () {
+    updateResourceButtonHref($(this), params);
+  });
+
+  var isProcessing = false;
+
+  // Handle clicks
+  $buttons.on('click', function (e) {
+    e.preventDefault();
+
+    if (isProcessing) {
+      console.warn(LOG, 'Click already being processed.');
       return;
     }
 
-    // jQuery is available, now check DOM state
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        init();
-      });
+    var $btn = $(this);
+
+    // Check if resource button is disabled
+    if ($btn.hasClass('disabled')) {
+      console.warn(LOG, 'Button is disabled — click ignored.');
+      return;
+    }
+
+    isProcessing = true;
+
+    var buttonType     = $btn.attr('data-button-type') || 'cta';
+    var buttonLocation = $btn.attr('data-location') || $btn.attr('id') || '';
+    var redirectUrl    = $btn.attr('href') || '';
+    var target         = $btn.attr('target') || '_self';
+
+    console.log(LOG, 'Clicked:', $btn.attr('id'), '(type:', buttonType + ')');
+
+    // Route to appropriate handler
+    if (buttonType === BUTTON_TYPES.CONVERSION) {
+      handleConversionButton($btn, params, buttonLocation, redirectUrl, target);
+    } else if (buttonType === BUTTON_TYPES.RESOURCE) {
+      handleResourceButton($btn, params, buttonLocation, redirectUrl, target);
     } else {
-      // DOM already loaded, execute immediately
-      init();
+      // Default to CTA behavior
+      handleCtaButton($btn, params, buttonLocation, redirectUrl, target);
     }
-  }
 
-  // Start initialization
-  safeInit();
+    // Reset processing flag after delay to allow redirect
+    setTimeout(function () { isProcessing = false; }, 3000);
+  });
 
-}(window.jQuery));
+  console.log(LOG, 'CTA button tracking initialized.');
+});
