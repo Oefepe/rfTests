@@ -1,7 +1,15 @@
-jQuery(function ($) {
-  'use strict';
+(function() {
+  // Safety check for jQuery
+  if (typeof jQuery === 'undefined') {
+    console.error('[PlaceholderScript] jQuery is not loaded');
+    return;
+  }
 
-  var LOG = '[PlaceholderScript]';
+  jQuery(function ($) {
+    'use strict';
+
+    console.log('[PlaceholderScript] Script executing...');
+    var LOG = '[PlaceholderScript]';
   var userId, contactId;
 
   try {
@@ -34,4 +42,5 @@ jQuery(function ($) {
   });
 
   console.log(LOG, 'Done. ' + replaced + ' link(s) updated.');
-});
+  });
+})();

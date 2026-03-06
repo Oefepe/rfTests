@@ -1,7 +1,15 @@
-jQuery(function ($) {
-  'use strict';
+(function() {
+  // Safety check for jQuery
+  if (typeof jQuery === 'undefined') {
+    console.error('[UserDetails] jQuery is not loaded');
+    return;
+  }
 
-  var LOG = '[UserDetails]';
+  jQuery(function ($) {
+    'use strict';
+
+    console.log('[UserDetails] Script executing...');
+    var LOG = '[UserDetails]';
   var DEFAULT_AVATAR = 'https://rfres.com/assets/img/icon-user-default.png';
 
   function getUrlParams() {
@@ -149,4 +157,5 @@ jQuery(function ($) {
   });
 
   console.log(LOG, 'User details initialized for userId:', params.userId);
-});
+  });
+})();

@@ -1,7 +1,15 @@
-jQuery(function ($) {
-  'use strict';
+(function() {
+  // Safety check for jQuery
+  if (typeof jQuery === 'undefined') {
+    console.error('[Analytics] jQuery is not loaded');
+    return;
+  }
 
-  var LOG = '[Analytics]';
+  jQuery(function ($) {
+    'use strict';
+
+    console.log('[Analytics] Script executing...');
+    var LOG = '[Analytics]';
 
   // Track injected codes per provider to prevent duplicates
   var injected = {
@@ -116,4 +124,5 @@ jQuery(function ($) {
       console.error(LOG, 'Failed to fetch analytics config — status:', status, '| error:', error);
     }
   });
-});
+  });
+})();

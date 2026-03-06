@@ -1,7 +1,15 @@
-jQuery(function ($) {
-  'use strict';
+(function() {
+  // Safety check for jQuery
+  if (typeof jQuery === 'undefined') {
+    console.error('[CtaButtonUnified] jQuery is not loaded');
+    return;
+  }
 
-  var LOG = '[CtaButtonUnified]';
+  jQuery(function ($) {
+    'use strict';
+
+    console.log('[CtaButtonUnified] Script executing...');
+    var LOG = '[CtaButtonUnified]';
 
   // Constants
   var BUTTON_TYPES = {
@@ -289,4 +297,5 @@ jQuery(function ($) {
   });
 
   console.log(LOG, 'CTA button tracking initialized.');
-});
+  });
+})();

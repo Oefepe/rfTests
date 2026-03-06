@@ -1,7 +1,15 @@
-jQuery(function ($) {
-  'use strict';
+(function() {
+  // Safety check for jQuery
+  if (typeof jQuery === 'undefined') {
+    console.error('[BookMe] jQuery is not loaded');
+    return;
+  }
 
-  var LOG = '[BookMe]';
+  jQuery(function ($) {
+    'use strict';
+
+    console.log('[BookMe] Script executing...');
+    var LOG = '[BookMe]';
   var checkCount = 0;
   var maxChecks = 20;
   var checkInterval = 500;
@@ -83,4 +91,5 @@ jQuery(function ($) {
       checkAndShowButton();
     }, checkInterval);
   }
-});
+  });
+})();
